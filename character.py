@@ -31,6 +31,8 @@ class Character(pygame.sprite.Sprite):
     elif keys_pressed[pygame.K_s] or keys_pressed[pygame.K_DOWN]:
       self.y += self.speed
 
+    self.rect.topleft = (self.x, self.y)
+
   def update(self):
     pass
 
