@@ -41,4 +41,4 @@ class Character(pygame.sprite.Sprite):
 
   def draw(self, window):
     window.blit(self.image, self.rect)
-    pygame.draw.rect(window, gs.RED, self.rect)
+    pygame.draw.rect(window, gs.RED, self.rect, 1)
