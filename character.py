@@ -101,3 +101,9 @@ class Character(pygame.sprite.Sprite):
             self.rect.bottom = item.rect.top
             self.x, self.y = self.rect.topleft
             return
+          
+  def snap_to_grid(self, action):
+    pass
+
+  def play_area_restriction(self, left_x, right_x, top_y, bottom_y):
+    pass
