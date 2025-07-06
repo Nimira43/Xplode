@@ -23,4 +23,4 @@ class Character(pygame.sprite.Sprite):
     pass
 
   def draw(self, window):
-    pass
+    pygame.draw.rect(window, gs.RED, self.rect)
