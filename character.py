@@ -44,7 +44,13 @@ class Character(pygame.sprite.Sprite):
     pygame.draw.rect(window, gs.RED, self.rect, 1)
 
   def animate(self, action):
-    pass
+    if pygame.time.get_ticks() - self.anim_time_set >= self.anim_time:
+      self.index += 1
+      if self.index == len(self.image_dict[action]):
+        self.index = 0
+
+      self.image = self.image_dict[action][self.index]
+      self.anim_time_set = pygame.time.get_ticks()
 
   def move(self, action):
     pass
