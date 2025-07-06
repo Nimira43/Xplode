@@ -8,13 +8,13 @@ class Game:
   def __init__(self, main, assets):
     self.MAIN = main
     self.ASSETS = assets
-    # self.player = Character(self, self.ASSETS.player_char)
 
     self.groups = {'hard_block': pygame.sprite.Group(),
                    'soft_block': pygame.sprite.Group(),
                    'player': pygame.sprite.Group()}
 
-    
+    self.player = Character(self, self.ASSETS.player_char, self.groups['player'], 3, 2, gs.SIZE)
+
     self.level = 1
     self.level_matrix = self.generate_level_matrix(gs.ROWS, gs.COLS)
 
