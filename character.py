@@ -79,4 +79,23 @@ class Character(pygame.sprite.Sprite):
   def collision_detection_items(self, item_list):
     for item in item_list:
       if self.rect.colliderect(item) and item.passable == False:
-        
+        if self.action == 'walk_right':
+          if self.rect.right > item.rect.left:
+            self.rect.right = item.rect.left
+            self.x, self.y = self.rect.topleft
+            return
+        if self.action == 'walk_right':
+          if self.rect.right > item.rect.left:
+            self.rect.right = item.rect.left
+            self.x, self.y = self.rect.topleft
+            return
+        if self.action == 'walk_right':
+          if self.rect.right > item.rect.left:
+            self.rect.right = item.rect.left
+            self.x, self.y = self.rect.topleft
+            return
+        if self.action == 'walk_right':
+          if self.rect.right > item.rect.left:
+            self.rect.right = item.rect.left
+            self.x, self.y = self.rect.topleft
+            return
