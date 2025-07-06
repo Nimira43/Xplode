@@ -53,4 +53,10 @@ class Character(pygame.sprite.Sprite):
       self.anim_time_set = pygame.time.get_ticks()
 
   def move(self, action):
-    pass
+    if not self.alive:
+      return
+    
+    if action != self.action:
+      self.action = action
+      self.index = 0
+      
