@@ -1,4 +1,5 @@
 import pygame
+from character import Character
 import gamesettings as gs
 
 class Game:
