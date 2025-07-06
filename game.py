@@ -45,6 +45,15 @@ class Game:
       for col in range(cols + 1):
         line.append('_')
       matrix.append(line)
+    self.insert_hard_blocks_into_matrix(matrix)
+    self.insert_soft_blocks_into_matrix(matrix)
     for row in matrix:
       print(row)
     return matrix
+  
+  def insert_hard_blocks_into_matrix(self, matrix):
+    pass
+  
+  def insert_soft_blocks_into_matrix(self, matrix):
+    pass
+
