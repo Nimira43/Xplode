@@ -103,7 +103,15 @@ class Character(pygame.sprite.Sprite):
             return
           
   def snap_to_grid(self, action):
-    pass
+    x_pos = self.x % gs.SIZE
+    y_pos = (self.y - gs.Y_OFFSET) % gs.SIZE
+
+    if action in ['walk_up', 'walk_down']:
+      if x_pos <= 12:
+        self.x = self.x - x_pos
+      if x_pos >= 52:
+        self.x = self.x + (gs.SIZE - x_pos)
+        
 
   def play_area_restriction(self, left_x, right_x, top_y, bottom_y):
     pass
