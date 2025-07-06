@@ -87,12 +87,12 @@ class Character(pygame.sprite.Sprite):
             self.x, self.y = self.rect.topleft
             return
         if self.action == 'walk_left':
-          if self.rect.left > item.rect.right:
+          if self.rect.left < item.rect.right:
             self.rect.left = item.rect.right
             self.x, self.y = self.rect.topleft
             return
         if self.action == 'walk_up':
-          if self.rect.top > item.rect.bottom:
+          if self.rect.top < item.rect.bottom:
             self.rect.top = item.rect.bottom
             self.x, self.y = self.rect.topleft
             return
