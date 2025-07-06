@@ -12,7 +12,7 @@ class Game:
     self.player.input()
 
   def update(self):
-    pass
+    self.player.update()
 
   def draw(self, window):
-    pass
+    self.player.draw(window)
