@@ -2,16 +2,21 @@ import pygame
 import gamesettings as gs
 
 class Character(pygame.sprite.Sprite):
-  def __init__(self, game):
+  def __init__(self, game, image_dict):
     super().__init__()
     self.GAME = game
     self.x = 0
     self.y = 0
     self.alive = True
     self.speed = 3
-    self.image = None
-    self.rect = pygame.Rect(self.x, self.y, gs.SIZE, gs.SIZE)
-
+    self.action = 'walk_left'
+    self.index = 0
+    self.anim_time = 50
+    self.anim_time_set = pygame.time.get_ticks()
+    self.image_dict = image_dict
+    self.image = self.image_dict[self.action][self.index]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+    
   def input(self):
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
