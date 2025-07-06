@@ -72,3 +72,6 @@ class Character(pygame.sprite.Sprite):
 
     self.animate(action)
     self.rect.topleft = (self.x, self.y)
+
+    self.collision.detection_items(self.GAME.groups['hard_block'])
+    self.collision.detection_items(self.GAME.groups['soft_block'])
