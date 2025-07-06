@@ -22,7 +22,9 @@ class Game:
     self.player.input()
 
   def update(self):
-    self.player.update()
+    for value in self.groups.values():
+      for item in value:
+        item.update()
 
   def draw(self, window):
     self.player.draw(window)
