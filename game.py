@@ -52,7 +52,15 @@ class Game:
     return matrix
   
   def insert_hard_blocks_into_matrix(self, matrix):
-    pass
+    for row_num, row in enumerate(matrix):
+      for col_num, col in enumerate(row):
+        if row_num == 0 or row_num == len(matrix)-1 or \
+          col_num == 0 or col_num == len(row)-1 or \
+            (row_num % 2 == 0 and col_num % 2 == 0):
+          matrix[row_num][col_num] = Hard_Block(self, self.ASSETS.hard_block['hard_block'], 
+                                                self.groups['hard_block'], row_num, col_num, gs.SIZE)
+    return 
+
   
   def insert_soft_blocks_into_matrix(self, matrix):
     pass
