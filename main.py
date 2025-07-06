@@ -3,7 +3,11 @@ import gamesettings as gs
 
 class Xplode:
   def __init__(self):
-    pass
+    pygame.init()
+    self.screen = pygame.display.set_mode((gs.SCREENWIDTH, gs.SCREENHEIGHT))
+    pygame.display.set_caption('Xplode')
+    self.FPS = pygame.time.Clock()
+    self.run = True
 
   def input(self):
     pass
@@ -16,3 +20,8 @@ class Xplode:
 
   def rungame(self):
     pass
+
+if __name__ == '__main__':
+  game = Xplode()
+  game.rungame()
+  pygame.quit()
