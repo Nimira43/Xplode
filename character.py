@@ -61,3 +61,11 @@ class Character(pygame.sprite.Sprite):
       self.index = 0
 
     direction = {'walk_left': -self.speed, 'walk_right': self.speed, 'walk_up': -self.speed, 'walk_down': self.speed}
+
+    if action == 'walk_left' or action == 'walk_right':
+      self.x += direction[action]
+    elif action == 'walk_up' or action == 'walk_down':
+      self.y += direction[action]
+
+    self.animate(action)
+    self.rect.topleft = (self.x, self.y)
