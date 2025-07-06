@@ -59,4 +59,5 @@ class Character(pygame.sprite.Sprite):
     if action != self.action:
       self.action = action
       self.index = 0
-      
+
+    direction = {'walk_left': -self.speed, 'walk_right': self.speed, 'walk_up': -self.speed, 'walk_down': self.speed}
