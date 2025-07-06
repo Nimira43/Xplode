@@ -22,7 +22,10 @@ class Xplode:
     pygame.display.update()
 
   def rungame(self):
-    pass
+    while self.run == True:
+      self.input()
+      self.update()
+      self.draw(self.screen)
 
 if __name__ == '__main__':
   game = Xplode()
