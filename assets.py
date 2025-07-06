@@ -11,3 +11,6 @@ class Assets:
     image = pygame.image.load(f'{path}/{filename}').convert_alpha()
     image = pygame.transform.scale(image, (width, height))
     return image
+  
+  def load_sprites(self, spritesheet, xcoord, ycoord, width, height):
+    pass
