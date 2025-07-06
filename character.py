@@ -71,6 +71,8 @@ class Character(pygame.sprite.Sprite):
       self.y += direction[action]
 
     self.animate(action)
+    self.snap_to_grid(action)
+    self.play_area_restriction(64, (gs.COLS - 1) * 64, gs.Y_OFFSET + 64, ((gs.ROWS - 1) * 64) + gs.Y_OFFSET)
     self.rect.topleft = (self.x, self.y)
 
     self.collision_detection_items(self.GAME.groups['hard_block'])
