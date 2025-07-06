@@ -1,5 +1,6 @@
 import pygame
 from assets import Assets
+from game import Game
 import gamesettings as gs
 
 class Xplode:
