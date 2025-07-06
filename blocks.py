@@ -11,7 +11,7 @@ class Blocks(pygame.sprite.Sprite):
     self.size = size
     self.x = self.col * self.size
     self.y = (self.row * self.size) + self.y_offset
-    self.passable = False
+    self.passable = True
     self.image_list = images
     self.image_index = 0
     self.image = self.image_list[self.image_index]
@@ -24,7 +24,7 @@ class Blocks(pygame.sprite.Sprite):
     window.blit(self.image, self.rect)
 
   def __repr__(self):
-    return "'@'"
+    return "'#'"
 
 class Hard_Block(Blocks):
   def __init__(self, game, images, group, row_num, col_num, size):
