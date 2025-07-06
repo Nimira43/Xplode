@@ -18,7 +18,8 @@ class Xplode:
     self.FPS.tick(gs.FPS)
 
   def draw(self, window):
-    pass
+    window.fill(gs.BLACK)
+    pygame.display.update()
 
   def rungame(self):
     pass
