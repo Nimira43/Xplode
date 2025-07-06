@@ -10,7 +10,9 @@ class Xplode:
     self.run = True
 
   def input(self):
-    pass
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+        self.run = False
 
   def update(self):
     pass
