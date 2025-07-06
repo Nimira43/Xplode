@@ -20,9 +20,11 @@ class Xplode:
 
   def update(self):
     self.FPS.tick(gs.FPS)
+    self.GAME.update()
 
   def draw(self, window):
     window.fill(gs.BLACK)
+    self.GAME.draw(window)
     pygame.display.update()
 
   def rungame(self):
