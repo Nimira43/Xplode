@@ -25,11 +25,11 @@ class Character(pygame.sprite.Sprite):
     if keys_pressed[pygame.K_d] or keys_pressed[pygame.K_RIGHT]:
       self.x += self.speed
     elif keys_pressed[pygame.K_a] or keys_pressed[pygame.K_LEFT]:
-      self.x += self.speed
+      self.x -= self.speed
     elif keys_pressed[pygame.K_w] or keys_pressed[pygame.K_UP]:
-      self.x += self.speed
+      self.y -= self.speed
     elif keys_pressed[pygame.K_s] or keys_pressed[pygame.K_DOWN]:
-      self.x += self.speed
+      self.y += self.speed
 
   def update(self):
     pass
