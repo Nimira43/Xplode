@@ -2,11 +2,14 @@ import pygame
 import gamesettings as gs
 
 class Character(pygame.sprite.Sprite):
-  def __init__(self, game, image_dict):
-    super().__init__()
+  def __init__(self, game, image_dict, group, row_num, col_num, size):
+    super().__init__(group)
     self.GAME = game
-    self.x = 0
-    self.y = 0
+    self.row_num = row_num
+    self.col_num = col_num
+    self.size = size
+    self.x = self.col_num * self.size
+    self.y = (self.row_num * self.size) + gs.Y_OFFSET
     self.alive = True
     self.speed = 3
     self.action = 'walk_left'
