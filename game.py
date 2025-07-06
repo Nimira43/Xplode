@@ -6,7 +6,7 @@ class Game:
   def __init__(self, main, assets):
     self.MAIN = main
     self.ASSETS = assets
-    self.player = Character(self, self.ASSETS, player_char)
+    self.player = Character(self, self.ASSETS.player_char)
 
     self.level = 1
     self.level_matrix = self.generate_level_matrix(gs.ROWS, gs.COLS)
