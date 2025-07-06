@@ -1,11 +1,15 @@
 import pygame
+from assets import Assets
 import gamesettings as gs
 
 class Xplode:
   def __init__(self):
     pygame.init()
+
     self.screen = pygame.display.set_mode((gs.SCREENWIDTH, gs.SCREENHEIGHT))
     pygame.display.set_caption('Xplode')
+
+    self.ASSETS = Assets()
     self.FPS = pygame.time.Clock()
     self.run = True
 
