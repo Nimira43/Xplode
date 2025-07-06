@@ -111,7 +111,13 @@ class Character(pygame.sprite.Sprite):
         self.x = self.x - x_pos
       if x_pos >= 52:
         self.x = self.x + (gs.SIZE - x_pos)
-        
+    
+    elif action in ['walk_left', 'walk_right']:
+      if y_pos <= 12:
+        self.y = self.y - y_pos
+      if y_pos >= 52:
+        self.y = self.y + (gs.SIZE - y_pos)
+
 
   def play_area_restriction(self, left_x, right_x, top_y, bottom_y):
     pass
