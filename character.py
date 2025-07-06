@@ -3,7 +3,8 @@ import gamesettings as gs
 
 class Character(pygame.sprite.Sprite):
   def __init__(self, game):
-    pass
+    super().__init__()
+    self.GAME = game
 
   def input(self):
     pass
