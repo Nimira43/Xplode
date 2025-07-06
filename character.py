@@ -8,6 +8,7 @@ class Character(pygame.sprite.Sprite):
     self.x = 0
     self.y = 0
     self.alive = True
+    self.speed = 3
     self.image = None
     self.rect = pygame.Rect(self.x, self.y, gs.SIZE, gs.SIZE)
 
