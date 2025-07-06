@@ -14,6 +14,7 @@ class Assets:
   
   def load_sprites(self, spritesheet, xcoord, ycoord, width, height):
     image = pygame.Surface((width, height))
+    image.fill((0, 0, 1))
 
   def load_sprite_range(self, image_dict, spritesheet, row=gs.SIZE, col=gs.SIZE, width=gs.SIZE, height=gs.SIZE, resize=False):
     pass
