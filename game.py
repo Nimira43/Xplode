@@ -7,7 +7,12 @@ class Game:
     self.ASSETS = assets
 
   def input(self):
-    pass
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+        self.MAIN.run = False
+      elif event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_ESCAPE:
+          self.MAIN.run = False
 
   def update(self):
     pass
