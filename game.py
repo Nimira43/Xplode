@@ -3,7 +3,8 @@ import gamesettings as gs
 
 class Game:
   def __init__(self, main, assets):
-    pass
+    self.MAIN = main
+    self.ASSETS = assets
 
   def input(self):
     pass
