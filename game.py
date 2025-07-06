@@ -27,7 +27,12 @@ class Game:
         item.update()
 
   def draw(self, window):
-    self.player.draw(window)
+    window.fill(gs.GREY)
+
+    for row_num, row in enumerate(self.level_matrix):
+      for col_num, col in enumerate(row):
+        window.blit(self.ASSETS.background['background'][0],
+                    ((col_num * gs.SIZE), (row_num * gs.SIZE) + gs.Y_OFFSET))
 
   def generate_level_matrix(self, rows, cols):
     matrix = []
