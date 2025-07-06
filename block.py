@@ -16,4 +16,11 @@ class Blocks(pygame.sprite.Sprite):
 
 class Hard_Block(Blocks):
   def __init__(self, game, images, group, row_num, col_num, size):
-    pass
+    super().__init__(game, images, group, row_num, col_num, size)
+
+class Soft_Block(Blocks):
+  def __init__(self, game, images, group, row_num, col_num, size):
+    super().__init__(game, images, group, row_num, col_num, size)
+
+  def __repr__(self):
+    return "'@'"
