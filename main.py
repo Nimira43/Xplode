@@ -11,13 +11,12 @@ class Xplode:
     pygame.display.set_caption('Xplode')
 
     self.ASSETS = Assets()
+    self.GAME = Game(self, self.ASSETS)
     self.FPS = pygame.time.Clock()
     self.run = True
 
   def input(self):
-    for event in pygame.event.get():
-      if event.type == pygame.QUIT:
-        self.run = False
+    self.GAME.input()
 
   def update(self):
     self.FPS.tick(gs.FPS)
