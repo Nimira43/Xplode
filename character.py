@@ -75,3 +75,8 @@ class Character(pygame.sprite.Sprite):
 
     self.collision.detection_items(self.GAME.groups['hard_block'])
     self.collision.detection_items(self.GAME.groups['soft_block'])
+
+  def collision_detection_items(self, item_list):
+    for item in item_list:
+      if self.rect.colliderect(item) and item.passable == False:
+        
