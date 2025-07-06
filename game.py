@@ -63,5 +63,19 @@ class Game:
 
   
   def insert_soft_blocks_into_matrix(self, matrix):
-    pass
+    for row_num, row in enumerate(matrix):
+      for col_num, col in enumerate(row):
+        if row_num == 0 or row_num == len(matrix)-1 or \
+          col_num == 0 or col_num == len(row)-1 or \
+            (row_num % 2 == 0 and col_num % 2 == 0):
+          continue
+        elif row_num in [2, 3, 4] and col_num in [1, 2, 3]:
+          continue
+        else:
+          cell = choice(['@', '_', '_', '_'])
+          if cell == '@':
+            cell = Soft_Block(self, self.ASSETS.soft_block['soft_block'],
+                              self.groups['soft_block'], row_num, col_num, gs.SIZE)
+          matrix[row_num][col_num] = cell
+    return          
 
