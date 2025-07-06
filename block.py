@@ -3,16 +3,28 @@ import gamesettings as gs
 
 class Blocks(pygame.sprite.Sprite):
   def __init__(self, game, images, group, row_num, col_num, size):
-    pass
+    super().__init__(group)
+    self.GAME = game
+    self.y_offset = gs.Y_OFFSET
+    self.row = row_num
+    self.col = col_num
+    self.size = size
+    self.x = self.col * self.size
+    self.y = (self.row * self.size) + self.y_offset
+    self.passable = False
+    self.image_list = images
+    self.image_index = 0
+    self.image = self.image_list[self.image_index]
+    self.rect = self.image.get_rect(top_left=(self.x, self.y))
 
   def update(self):
     pass
 
   def draw(self, window):
-    pass
+    window.blit(self.image, self.rect)
 
   def __repr__(self):
-    pass
+    return "'@'"
 
 class Hard_Block(Blocks):
   def __init__(self, game, images, group, row_num, col_num, size):
