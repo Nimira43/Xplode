@@ -15,7 +15,7 @@ class Xplode:
         self.run = False
 
   def update(self):
-    pass
+    self.FPS.tick(gs.FPS)
 
   def draw(self, window):
     pass
