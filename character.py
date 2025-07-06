@@ -16,7 +16,7 @@ class Character(pygame.sprite.Sprite):
     self.image_dict = image_dict
     self.image = self.image_dict[self.action][self.index]
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
-    
+
   def input(self):
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
@@ -28,15 +28,13 @@ class Character(pygame.sprite.Sprite):
     keys_pressed = pygame.key.get_pressed()
 
     if keys_pressed[pygame.K_d] or keys_pressed[pygame.K_RIGHT]:
-      self.x += self.speed
+      self.move('walk_right')
     elif keys_pressed[pygame.K_a] or keys_pressed[pygame.K_LEFT]:
-      self.x -= self.speed
+      self.move('walk_left')
     elif keys_pressed[pygame.K_w] or keys_pressed[pygame.K_UP]:
-      self.y -= self.speed
+      self.move('walk_up')
     elif keys_pressed[pygame.K_s] or keys_pressed[pygame.K_DOWN]:
-      self.y += self.speed
-
-    self.rect.topleft = (self.x, self.y)
+      self.move('walk_down')
 
   def update(self):
     pass
