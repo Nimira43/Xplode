@@ -120,4 +120,11 @@ class Character(pygame.sprite.Sprite):
 
 
   def play_area_restriction(self, left_x, right_x, top_y, bottom_y):
-    pass
+    if self.x < left_x:
+      self.x = left_x
+    elif self.x > right_x:
+      self.x = right_x
+    elif self.y < top_y:
+      self.y = top_y
+    elif self.y > bottom_y:
+      self.y = bottom_y
