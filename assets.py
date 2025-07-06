@@ -16,6 +16,8 @@ class Assets:
     image = pygame.Surface((width, height))
     image.fill((0, 0, 1))
     image.blit(spritesheet, (0, 0), (xcoord, ycoord, width, height))
+    image.set_colorkey(gs.BLACK)
+    return image
 
   def load_sprite_range(self, image_dict, spritesheet, row=gs.SIZE, col=gs.SIZE, width=gs.SIZE, height=gs.SIZE, resize=False):
     pass
