@@ -33,8 +33,11 @@ class Character(pygame.sprite.Sprite):
           self.GAME.MAIN.run = False
         elif event.key == pygame.K_SPACE:
           row, col = ((self.rect.centery - gs.Y_OFFSET) // gs.SIZE, self.rect.centerx // self.size)
-          # if self.GAME.level_matrix[row][col] == '_' and self.bombs_planted < self.bomb_limit: 
-          #   Bomb(self.GAME, self.GAME.ASSETS.bomb['bomb'])
+          if self.GAME.level_matrix[row][col] == '_' and self.bombs_planted < self.bomb_limit: 
+            Bomb(self.GAME, self.GAME.ASSETS.bomb['bomb'], self.GAME.groups['bomb'], self.power, row, col, gs.SIZE, self.remote)
+        elif event.key == pygame.K_LCTRL and self.remote and self.GAME.groups['bomb']:
+          bomb_list = self.GAME.groups['bomb'].sprites()
+          bomb_list[-1].explode()
 
     keys_pressed = pygame.key.get_pressed()
 
@@ -50,9 +53,9 @@ class Character(pygame.sprite.Sprite):
   def update(self):
     pass
 
-  def draw(self, window):
-    window.blit(self.image, self.rect)
-    pygame.draw.rect(window, gs.RED, self.rect, 1)
+  def draw(self, window, offset):
+    window.blit(self.image, (self.rect.x - offset, self.rect.y))
+    pygame.draw.rect(window, gs.RED, (self.rect.x - offset, self.rect.y, 64, 64), 1)
 
   def animate(self, action):
     if pygame.time.get_ticks() - self.anim_time_set >= self.anim_time:
@@ -186,3 +189,10 @@ class Bomb(pygame.sprite.Sprite):
 
   def __repr__(self):
     return "'!'"
+  
+class Exposion(pygame.sprite.Sprite):
+  def __init__():
+    pass
+
+  def update(self):
+    pass
