@@ -146,4 +146,19 @@ class Bomb(pygame.sprite.Sprite):
     self.size = size
     self.x = self.col * self.size
     self.y = (self.row * self.size) + gs.Y_OFFSET
-    
+
+    self.bomb_counter = 1
+    self.bomb_timer = 12
+    self.passable = True
+    self.remote = remote
+    self.power = power
+
+    self.index = 0
+    self.image_list = image_list
+    self.image = self.image_list[self.index]
+    self.rect = self.image.get_Rect(topleft=(self.x, self.y))
+
+    self.anim_length = len(self.image_list)
+    self.anim_frame_time = 200
+    self.anim_timer = pygame.time.get_ticks()
+    self.insert_bomb_into_grid()
