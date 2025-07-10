@@ -12,7 +12,11 @@ class Character(pygame.sprite.Sprite):
     self.y = (self.row_num * self.size) + gs.Y_OFFSET
     self.alive = True
     self.speed = 3
+    self.bomb_limit = 2
+    self.remote = True
+    self.power = 2
     self.action = 'walk_left'
+    self.bombs_planted = 0
     self.index = 0
     self.anim_time = 50
     self.anim_time_set = pygame.time.get_ticks()
