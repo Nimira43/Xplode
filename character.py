@@ -191,8 +191,19 @@ class Bomb(pygame.sprite.Sprite):
     return "'!'"
   
 class Exposion(pygame.sprite.Sprite):
-  def __init__():
+  def __init__(self, game, image_dict, image_type, power, group, row_num, col_num, size):
     pass
 
   def update(self):
     pass
+
+  def draw(self, window, x_offset):
+    pass
+
+  def animate(self): 
+    pass
+
+  def calculate_explosive_path(self):
+    pass
+
+  
