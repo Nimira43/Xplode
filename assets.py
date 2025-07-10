@@ -12,6 +12,9 @@ class Assets:
     self.bomb = self.load_sprite_range(gs.BOMB, self.spritesheet)
     self.explosions = self.load_sprite_range(gs.EXPLOSIONS, self.spritesheet)
 
+    for image_list in ['right_end', 'right_mid', 'down_end', 'down_mid']:
+      self.rotate_images_in_list(self.explosions[image_list], 180)
+
   def load_sprite_sheet(self, path, filename, width, height):
     image = pygame.image.load(f"{path}/{filename}").convert_alpha()
     image = pygame.transform.scale(image, (width, height))
