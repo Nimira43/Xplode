@@ -46,6 +46,12 @@ class Soft_Block(Blocks):
           self.kill()
         self.image = self.image_list[self.image_index]
         self.anim_timer = pygame.time.get_ticks()
+  
+  def destroy_soft_block(self):
+    if not self.destroyed:
+      self.anim_timer = pygame.time.get_ticks()
+      self.destroyed = True
+      self.GAME.level_matrix[self.row][self.col] = '_'
 
   def __repr__(self):
     return "'@'"
