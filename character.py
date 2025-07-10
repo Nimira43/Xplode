@@ -140,3 +140,10 @@ class Character(pygame.sprite.Sprite):
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
     super().__init__(group)
+    self.GAME = game
+    self.row = row_num
+    self.col = col_num
+    self.size = size
+    self.x = self.col * self.size
+    self.y = (self.row * self.size) + gs.Y_OFFSET
+    
