@@ -31,6 +31,10 @@ class Character(pygame.sprite.Sprite):
       elif event.type == pygame.KEYDOWN:
         if event.key == pygame.K_ESCAPE:
           self.GAME.MAIN.run = False
+        elif event.key == pygame.K_SPACE:
+          row, col = ((self.rect.centery - gs.Y_OFFSET) // gs.SIZE, self.rect.centerx // self.size)
+          # if self.GAME.level_matrix[row][col] == '_' and self.bombs_planted < self.bomb_limit: 
+          #   Bomb(self.GAME, self.GAME.ASSETS.bomb['bomb'])
 
     keys_pressed = pygame.key.get_pressed()
 
@@ -132,3 +136,7 @@ class Character(pygame.sprite.Sprite):
       self.y = top_y
     elif self.y > bottom_y:
       self.y = bottom_y
+
+class Bomb(pygame.sprite.Sprite):
+  def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
+    super().__init__(group)
