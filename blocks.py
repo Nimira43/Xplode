@@ -34,5 +34,9 @@ class Soft_Block(Blocks):
   def __init__(self, game, images, group, row_num, col_num, size):
     super().__init__(game, images, group, row_num, col_num, size)
 
+    self.anim_timer = pygame.time.get_ticks()
+    self.anim_frame_time = 50
+    self.destroyed = False
+
   def __repr__(self):
     return "'@'"
