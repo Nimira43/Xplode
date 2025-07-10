@@ -37,3 +37,8 @@ class Assets:
           image = pygame.transform.scale(image, (32, 32))
         animation_images[animation].append(image)
     return animation_images
+  
+  def rotate_images_in_list(self, image_list, rotation):
+    for ind, image in enumerate(image_list):
+      image = pygame.transform.rotate(image.rotation)
+      image_list[ind] = image
