@@ -162,3 +162,27 @@ class Bomb(pygame.sprite.Sprite):
     self.anim_frame_time = 200
     self.anim_timer = pygame.time.get_ticks()
     self.insert_bomb_into_grid()
+
+  def update(self):
+    pass
+
+  def draw(self, window, offset):
+    window.blit(self.image, (self.rect.x - offset, self.rect.y))
+
+  def insert_bomb_into_grid(self):
+    pass
+
+  def animation(self):
+    pass
+
+  def remove_bomb_from_grid(self):
+    pass
+
+  def explode(self):
+    pass
+
+  def planted_bomb_player_collision(self):
+    pass
+
+  def __repr__(self):
+    return "'!'"
