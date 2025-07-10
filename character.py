@@ -209,3 +209,17 @@ class Explosion(pygame.sprite.Sprite):
   def calculate_direction_cells(self, cell):
     pass
 
+class FireBall(pygame.sprite.Sprite):
+  def __init__(self, image_list, group, row_num, col_num, size):
+    pass
+
+  def update(self):
+    pass
+
+  def draw(self, window, x_offset):
+    pass
+
+  def animate(self): 
+    pass
+
+ 
