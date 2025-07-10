@@ -190,7 +190,7 @@ class Bomb(pygame.sprite.Sprite):
   def __repr__(self):
     return "'!'"
   
-class Exposion(pygame.sprite.Sprite):
+class Explosion(pygame.sprite.Sprite):
   def __init__(self, game, image_dict, image_type, power, group, row_num, col_num, size):
     pass
 
@@ -206,4 +206,6 @@ class Exposion(pygame.sprite.Sprite):
   def calculate_explosive_path(self):
     pass
 
-  
+  def calculate_direction_cells(self, cell):
+    pass
+
