@@ -80,5 +80,9 @@ class Game:
             cell = Soft_Block(self, self.ASSETS.soft_block['soft_block'],
                               self.groups['soft_block'], row_num, col_num, gs.SIZE)
           matrix[row_num][col_num] = cell
-    return          
+    return      
+
+  def update_x_camera_offset_player_position(self, player_x_pos):
+    if player_x_pos >= 576 and player_x_pos <= 1280:
+      self.camera_x_offset = player_x_pos - 576    
 
