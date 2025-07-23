@@ -190,7 +190,8 @@ class Bomb(pygame.sprite.Sprite):
       self.bomb_counter += 1
 
   def remove_bomb_from_grid(self):
-    pass
+    self.GAME.level_matrix[self.row][self.col] = "_"
+    self.GAME.player.bombs_pplanted -= 1
 
   def explode(self):
     pass
