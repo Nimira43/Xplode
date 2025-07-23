@@ -167,7 +167,10 @@ class Bomb(pygame.sprite.Sprite):
     self.insert_bomb_into_grid()
 
   def update(self):
-    pass
+    self.animation()
+    self.planted_bomb_player_collision()
+    if self.bomb_counter == self.bomb_timer and not self.remote:
+      self.explode()
 
   def draw(self, window, offset):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
