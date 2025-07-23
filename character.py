@@ -281,6 +281,7 @@ class Explosion(pygame.sprite.Sprite):
     down = (self.row_num + (cell + 1), self.col_num,
             self.row_num + (cell + 2), self.col_num,
             'down_end', 'down_mid' )
+    return [left, right, up, down]
     
 
 class FireBall(pygame.sprite.Sprite):
