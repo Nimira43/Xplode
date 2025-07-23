@@ -89,6 +89,8 @@ class Character(pygame.sprite.Sprite):
     self.collision_detection_items(self.GAME.groups['hard_block'])
     self.collision_detection_items(self.GAME.groups['soft_block'])
 
+    self.GAME.update_x_camera_offset_player_position(self.rect.x)
+
   def collision_detection_items(self, item_list):
     for item in item_list:
       if self.rect.colliderect(item) and item.passable == False:
@@ -180,7 +182,12 @@ class Bomb(pygame.sprite.Sprite):
     self.GAME.player.bombs_planted += 1
 
   def animation(self):
-    pass
+    if pygame.time.get_ticks() - self.anim_timer >= self.anim_frame_time:
+      self.index += 1
+      self.index = self.index % self.anim_length
+      self.image = self.image_list[self.index]
+      self.anim_timer = pygame.time.get_ticks()
+      self.bomb_counter += 1
 
   def remove_bomb_from_grid(self):
     pass
