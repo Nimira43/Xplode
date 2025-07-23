@@ -199,7 +199,10 @@ class Bomb(pygame.sprite.Sprite):
     self.remove_bomb_from_grid()
 
   def planted_bomb_player_collision(self):
-    pass
+    if not self.passable:
+      return
+    if not self.rect.colliderect(self.GAME.player):
+      self.passable = False
 
   def __repr__(self):
     return "'!'"
