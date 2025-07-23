@@ -269,7 +269,9 @@ class Explosion(pygame.sprite.Sprite):
         
 
   def calculate_direction_cells(self, cell):
-    pass
+    left = (self.row_num, self.col_num - (cell + 1),
+            self.row_num, self.col_num - (cell + 2),
+            'left_end', 'left_mid' )
 
 class FireBall(pygame.sprite.Sprite):
   def __init__(self, image_list, group, row_num, col_num, size):
