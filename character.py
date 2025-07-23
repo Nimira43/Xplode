@@ -298,10 +298,10 @@ class FireBall(pygame.sprite.Sprite):
     self.image_list = image_list
     self.image = self.image_list[self.index]
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
-
+    self.passable = False
 
   def update(self):
-    pass
+    self.animate()
 
   def draw(self, window, x_offset):
     pass
