@@ -40,5 +40,5 @@ class Assets:
   
   def rotate_images_in_list(self, image_list, rotation):
     for ind, image in enumerate(image_list):
-      image = pygame.transform.rotate(image.rotation)
+      image = pygame.transform.rotate(image, rotation)
       image_list[ind] = image
