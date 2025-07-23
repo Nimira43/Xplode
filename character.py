@@ -194,7 +194,9 @@ class Bomb(pygame.sprite.Sprite):
     self.GAME.player.bombs_pplanted -= 1
 
   def explode(self):
-    pass
+    self.kill()
+    Explosion(self.GAME, self.GAME.ASSETS.explosions, 'centre', self.power, self.GAME.groups['explosions'], self.row, self.col, self.size)
+    self.remove_bomb_from_grid()
 
   def planted_bomb_player_collision(self):
     pass
