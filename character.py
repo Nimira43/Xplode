@@ -307,6 +307,12 @@ class FireBall(pygame.sprite.Sprite):
     window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
   def animate(self): 
-    pass
+    if pygame.time.get_ticks() - self.anim_timer >= self.anim_frame_time:
+      self.index += 1
+      if self.index == len(self.image_list):
+        self.kill()
+        return
+      self.image = self.image_list[self.index]
+      self.anim_timer = pygame.time.get_ticks()
 
  
