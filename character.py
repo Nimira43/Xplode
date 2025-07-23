@@ -286,7 +286,13 @@ class Explosion(pygame.sprite.Sprite):
 
 class FireBall(pygame.sprite.Sprite):
   def __init__(self, image_list, group, row_num, col_num, size):
-    pass
+    super().__init__(group)
+    self.row_num = row_num
+    self.col_num = col_num
+    self.size = size
+    self.y = self.row_num * self.size + gs.Y_OFFSET
+    self.x = self.col_num * self.size
+    
 
   def update(self):
     pass
