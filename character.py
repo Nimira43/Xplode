@@ -209,7 +209,18 @@ class Bomb(pygame.sprite.Sprite):
   
 class Explosion(pygame.sprite.Sprite):
   def __init__(self, game, image_dict, image_type, power, group, row_num, col_num, size):
-    pass
+    super().__init__(group)
+    self.GAME = game
+    self.row_num = row_num
+    self.col_num = col_num
+    self.size = size
+    self.y = (self.row_num * self.size) + gs.Y_OFFSET
+    self.x = self.col_num * self.size
+    self.index = 0
+    self.anim_frame_time = 75
+    self.anim_timer = pygame.time.get_ticks()
+    self.image_dict = image_dict
+    self.image_type = image_type
 
   def update(self):
     pass
