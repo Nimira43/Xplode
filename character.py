@@ -243,7 +243,9 @@ class Explosion(pygame.sprite.Sprite):
       self.anim_timer = pygame.time.get_ticks()
 
   def calculate_explosive_path(self):
-    pass
+    valid_directions = [True, True, True, True]
+    for power_cell in range(self.power):
+      directions = self.calculate_direction_cells(power_cell)
 
   def calculate_direction_cells(self, cell):
     pass
