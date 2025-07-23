@@ -39,7 +39,7 @@ class Game:
     
     for value in self.groups.values():
       for item in value:
-        item.draw(window)
+        item.draw(window, self.camera_x_offset)
 
   def generate_level_matrix(self, rows, cols):
     matrix = []
