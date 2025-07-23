@@ -304,7 +304,7 @@ class FireBall(pygame.sprite.Sprite):
     self.animate()
 
   def draw(self, window, x_offset):
-    pass
+    window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
   def animate(self): 
     pass
