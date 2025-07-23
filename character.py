@@ -292,7 +292,13 @@ class FireBall(pygame.sprite.Sprite):
     self.size = size
     self.y = self.row_num * self.size + gs.Y_OFFSET
     self.x = self.col_num * self.size
-    
+    self.index = 0
+    self.anim_frame_time = 75
+    self.anim_timer = pygame.time.get_ticks()
+    self.image_list = image_list
+    self.image = self.image_list[self.index]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+
 
   def update(self):
     pass
