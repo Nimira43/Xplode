@@ -257,6 +257,15 @@ class Explosion(pygame.sprite.Sprite):
             valid_directions[ind] = False
           else:
             FireBall(self.image_dict[dir[5]], self.GAME.groups['explosions'], dir[0], dir[1], gs.SIZE)
+        elif self.GAME.level_matrix[dir[0]][dir[1]] in self.GAME.groups['bomb'].sprites():
+          self.GAME.level_matrix[dir[0]][dir[1]].explode()
+          valid_directions[ind] = False
+        elif self.GAME.level_matrix[dir[0]][dir[1]] in self.GAME.groups['soft_block'].sprites():
+          self.GAME.level_matrix[dir[0]][dir[1]].destroy_soft_blocks()
+          valid_directions[ind] = False
+        else:
+          valid_directions[ind] = False
+          continue
         
 
   def calculate_direction_cells(self, cell):
