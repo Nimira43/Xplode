@@ -252,6 +252,9 @@ class Explosion(pygame.sprite.Sprite):
         if self.GAME.level_matrix[dir[0]][dir[1]] == '_':
           if power_cell == self.power - 1:
             FireBall(self.image_dict[dir[4], self.GAME.groups['explosions'], dir[0], dir[1], gs.SIZE])
+          elif self.GAME.level_matrix[dir[2]][dir[3]] in self.GAME.groups['hard_block'].sprites():
+            FireBall(self.image_dict[dir[4]], self.GAME.groups['explosions'], dir[0], dir[1], gs.SIZE)
+            valid_directions[ind] = False
 
   def calculate_direction_cells(self, cell):
     pass
