@@ -221,6 +221,12 @@ class Explosion(pygame.sprite.Sprite):
     self.anim_timer = pygame.time.get_ticks()
     self.image_dict = image_dict
     self.image_type = image_type
+    self.image = self.image_dict[self.image_type][self.index]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+    self.power = power
+    self.passable = False
+    self.calculate_explosive_path()
+
 
   def update(self):
     pass
