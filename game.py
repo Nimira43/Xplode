@@ -8,9 +8,12 @@ class Game:
   def __init__(self, main, assets):
     self.MAIN = main
     self.ASSETS = assets
+    self.camera_x_offset = 0
 
     self.groups = {'hard_block': pygame.sprite.Group(),
                    'soft_block': pygame.sprite.Group(),
+                   "bomb": pygame.sprite.Group(),
+                   "explosions": pygame.sprite.Group(),
                    'player': pygame.sprite.Group()}
 
     self.player = Character(self, self.ASSETS.player_char, self.groups['player'], 3, 2, gs.SIZE)
