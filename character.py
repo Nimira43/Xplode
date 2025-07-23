@@ -272,6 +272,16 @@ class Explosion(pygame.sprite.Sprite):
     left = (self.row_num, self.col_num - (cell + 1),
             self.row_num, self.col_num - (cell + 2),
             'left_end', 'left_mid' )
+    right = (self.row_num, self.col_num + (cell + 1),
+            self.row_num, self.col_num + (cell + 2),
+            'right_end', 'right_mid' )
+    up = (self.row_num - (cell + 1), self.col_num,
+            self.row_num - (cell + 2), self.col_num,
+            'up_end', 'up_mid' )
+    down = (self.row_num + (cell + 1), self.col_num,
+            self.row_num + (cell + 2), self.col_num,
+            'down_end', 'down_mid' )
+    
 
 class FireBall(pygame.sprite.Sprite):
   def __init__(self, image_list, group, row_num, col_num, size):
