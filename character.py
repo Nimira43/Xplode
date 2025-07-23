@@ -176,7 +176,8 @@ class Bomb(pygame.sprite.Sprite):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
 
   def insert_bomb_into_grid(self):
-    pass
+    self.GAME.level_matrix[self.row][self.col] = self
+    self.GAME.player.bombs_planted += 1
 
   def animation(self):
     pass
