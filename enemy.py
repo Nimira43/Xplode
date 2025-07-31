@@ -12,7 +12,7 @@ class Enemy(pygame.sprite.Sprite):
   def draw(self, window, x_offset):
     pass
 
-  def movement():
+  def movement(self):
     pass
 
   def collision_detection_blocks():
