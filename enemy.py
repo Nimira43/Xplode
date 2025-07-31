@@ -21,7 +21,7 @@ class Enemy(pygame.sprite.Sprite):
   def new_direction(self, group, move_direction, directions):
     pass
 
-  def change_direction():
+  def change_direction(self, direction_list):
     pass
 
   def determin_if_direction_valid():
