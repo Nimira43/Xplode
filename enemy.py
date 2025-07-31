@@ -9,7 +9,7 @@ class Enemy(pygame.sprite.Sprite):
   def update(self):
     pass
 
-  def draw():
+  def draw(self, window, x_offset):
     pass
 
   def movement():
