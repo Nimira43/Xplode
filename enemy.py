@@ -4,7 +4,7 @@ from random import choice
 
 class Enemy(pygame.sprite.Sprite):
   def __init__(self, game, image_dict, group, row_num, col_num, size):
-    pass
+    super().__init__(group)
 
   def update(self):
     pass
