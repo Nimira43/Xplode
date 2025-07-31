@@ -16,6 +16,9 @@ class Enemy(pygame.sprite.Sprite):
     self.size = size
     self.x = self.col * self.size
     self.y = (self.row * self.size) + gs.Y_OFFSET
+    self.destroyed = False
+    self.direction = 'left'
+    self.dir_mvmt = {'left': -self.speed, 'right': self.speed, 'up': -self.speed, 'down': self.speed}
 
   def update(self):
     pass
