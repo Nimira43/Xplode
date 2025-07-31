@@ -3,5 +3,32 @@ import gamesettings as gs
 from random import choice
 
 class Enemy(pygame.sprite.Sprite):
-  def __init__():
+  def __init__(self, game, image_dict, group, row_num, col_num, size):
+    pass
+
+  def update():
+    pass
+
+  def draw():
+    pass
+
+  def movement():
+    pass
+
+  def collision_detection_blocks():
+    pass
+
+  def new_direction():
+    pass
+
+  def change_direction():
+    pass
+
+  def determin_if_direction_valid():
+    pass
+
+  def animate():
+    pass
+
+  def destroy():
     pass
