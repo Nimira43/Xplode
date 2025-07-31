@@ -15,7 +15,7 @@ class Enemy(pygame.sprite.Sprite):
   def movement(self):
     pass
 
-  def collision_detection_blocks():
+  def collision_detection_blocks(self, group, direction):
     pass
 
   def new_direction():
