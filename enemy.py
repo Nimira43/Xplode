@@ -27,8 +27,8 @@ class Enemy(pygame.sprite.Sprite):
   def determine_if_direction_valid(self, directions, row, col):
     pass
 
-  def animate():
+  def animate(self):
     pass
 
-  def destroy():
+  def destroy(self):
     pass
