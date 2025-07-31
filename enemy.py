@@ -6,7 +6,7 @@ class Enemy(pygame.sprite.Sprite):
   def __init__(self, game, image_dict, group, row_num, col_num, size):
     pass
 
-  def update():
+  def update(self):
     pass
 
   def draw():
