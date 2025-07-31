@@ -11,7 +11,11 @@ class Enemy(pygame.sprite.Sprite):
     self.chase_player = False
     self.LoS = 0
     self.see_player_hack = False
-    
+    self.row = row_num
+    self.col = col_num
+    self.size = size
+    self.x = self.col * self.size
+    self.y = (self.row * self.size) + gs.Y_OFFSET
 
   def update(self):
     pass
