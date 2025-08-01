@@ -38,7 +38,15 @@ class Enemy(pygame.sprite.Sprite):
     window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
   def movement(self):
-    pass
+    if self.destroyed:
+      return
+    move_direction = self.action.split('_')[1]
+
+    if move_direction in ['left', 'right']:
+      self.x += self.dir_mvmt[move_direction]
+    else:
+      self.y += self.dir_mvmt[move_direction]
+
 
   def collision_detection_blocks(self, group, direction):
     pass
