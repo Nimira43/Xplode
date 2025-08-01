@@ -72,7 +72,12 @@ class Enemy(pygame.sprite.Sprite):
     return None  
 
   def new_direction(self, group, move_direction, directions):
-    pass
+    dir = self.collision_detection_blocks(group, move_direction)
+    if dir:
+      directions.remove(dir)
+      new_direction = choice(directions)
+      se
+
 
   def change_directions(self, direction_list):
     pass
