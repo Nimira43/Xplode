@@ -107,6 +107,8 @@ class Enemy(pygame.sprite.Sprite):
       directions.remove('down')
     if self.GAME.level_matrix[row][col - 1] != '_':
       directions.remove('left')
+    if self.GAME.level_matrix[row][col + 1] != '_':
+      directions.remove('right')
 
   def animate(self):
     pass
