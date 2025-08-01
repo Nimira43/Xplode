@@ -49,6 +49,8 @@ class Enemy(pygame.sprite.Sprite):
 
     directions = ['left', 'right', 'up', 'down']
     self.new_direction(self.GAME.groups['hard_blocks'], move_direction, directions)
+    self.new_direction(self.GAME.groups['soft_blocks'], move_direction, directions)
+    self.new_direction(self.GAME.groups['bomb'], move_direction, directions)
 
   def collision_detection_blocks(self, group, direction):
     pass
