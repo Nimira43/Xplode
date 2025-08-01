@@ -31,10 +31,11 @@ class Enemy(pygame.sprite.Sprite):
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
   def update(self):
-    pass
+    self.movement()
+    self.animate()
 
   def draw(self, window, x_offset):
-    pass
+    
 
   def movement(self):
     pass
