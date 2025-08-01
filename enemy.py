@@ -63,6 +63,9 @@ class Enemy(pygame.sprite.Sprite):
         if direction == 'right' and self.rect.left < block.rect.left:
           self.x = block.rect.left - self.size
           return direction
+        if direction == 'up' and self.rect.bottom < block.rect.bottom:
+          self.y = block.rect.bottom
+          return direction
 
   def new_direction(self, group, move_direction, directions):
     pass
