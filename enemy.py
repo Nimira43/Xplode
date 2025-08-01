@@ -94,6 +94,12 @@ class Enemy(pygame.sprite.Sprite):
     
     self.determine_if_direction_valid(direction_list, row, col)
 
+    new_direction = choice(direction_list)
+    self.action = f'walk_{new_direction}'
+
+    self.change_dir_timer = pygame.time.get_ticks()
+    return
+
   def determine_if_direction_valid(self, directions, row, col):
     pass
 
