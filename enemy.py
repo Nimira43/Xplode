@@ -80,7 +80,8 @@ class Enemy(pygame.sprite.Sprite):
       self.change_dir_timer = pygame.time.get_ticks()
 
   def change_directions(self, direction_list):
-    pass
+    if pygame.time.get_ticks() - self.change_dir_timer < self.dir_time:
+      return
 
   def determine_if_direction_valid(self, directions, row, col):
     pass
