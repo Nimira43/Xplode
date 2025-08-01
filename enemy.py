@@ -85,6 +85,9 @@ class Enemy(pygame.sprite.Sprite):
     
     if self.x % self.size != 0 or (self.y - gs.Y_OFFSET) % self.size != 0:
       return
+    
+    row = int((self.y - gs.Y_OFFSET) // self.size)
+    col = int(self.x // self.size)
 
   def determine_if_direction_valid(self, directions, row, col):
     pass
