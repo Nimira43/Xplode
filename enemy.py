@@ -76,8 +76,8 @@ class Enemy(pygame.sprite.Sprite):
     if dir:
       directions.remove(dir)
       new_direction = choice(directions)
-      se
-
+      self.action = f'walk_{new_direction}'
+      self.change_dir_timer = pygame.time.get_ticks()
 
   def change_directions(self, direction_list):
     pass
