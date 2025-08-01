@@ -55,12 +55,16 @@ class Enemy(pygame.sprite.Sprite):
     self.rect.update(self.x, self.y, self.size, self.size)
 
   def collision_detection_blocks(self, group, direction):
-    pass
+    for block in group:
+      if block.rect.colliderect(self.rect):
+        if direction == 'left' and self.rect.right > block.rect.right:
+          self.x = block.rect.right
+          return direction
 
   def new_direction(self, group, move_direction, directions):
     pass
 
-  def change_direction(self, direction_list):
+  def change_directions(self, direction_list):
     pass
 
   def determine_if_direction_valid(self, directions, row, col):
