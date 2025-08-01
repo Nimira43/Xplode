@@ -27,6 +27,8 @@ class Enemy(pygame.sprite.Sprite):
     self.image_dict = image_dict
     self.anim_frame_time = 100
     self.anim_timer = pygame.time.get_ticks()
+    self.image = self.image_dict[self.action][self.index]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
   def update(self):
     pass
