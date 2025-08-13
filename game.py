@@ -1,5 +1,6 @@
 import pygame
 from character import Character
+from enemy import Enemy
 from blocks import Hard_Block, Soft_Block 
 from random import choice
 import gamesettings as gs
