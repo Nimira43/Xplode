@@ -45,7 +45,7 @@ class Game:
     for row_num, row in enumerate(self.level_matrix):
       for col_num, col in enumerate(row):
         window.blit(self.ASSETS.background['background'][0],
-                    ((col_num * gs.SIZE), (row_num * gs.SIZE) + gs.Y_OFFSET))
+                    ((col_num * gs.SIZE) -self.camera_x_offset, (row_num * gs.SIZE) + gs.Y_OFFSET))
     
     for value in self.groups.values():
       for item in value:
