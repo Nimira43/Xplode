@@ -31,6 +31,14 @@ class Game:
       for item in value:
         item.update()
 
+    if self.groups['explosions']:
+      killed_enemies = pygame.sprite.groupcollide(self.groups['explosions'], self.groups['enemies'], False, False)
+      if killed_enemies:
+        for flame, enemies in killed_enemies.items():
+          for enemy in enemies:
+            if pygame.sprite.collide_mask(flame, enemy):
+              enemy.destroy()
+
   def draw(self, window):
     window.fill(gs.GREY)
 
