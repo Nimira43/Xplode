@@ -13,8 +13,9 @@ class Game:
 
     self.groups = {'hard_block': pygame.sprite.Group(),
                    'soft_block': pygame.sprite.Group(),
-                   "bomb": pygame.sprite.Group(),
-                   "explosions": pygame.sprite.Group(),
+                   'bomb': pygame.sprite.Group(),
+                   'explosions': pygame.sprite.Group(),
+                   'enemies': pygame.sprite.Group(),
                    'player': pygame.sprite.Group()}
 
     self.player = Character(self, self.ASSETS.player_char, self.groups['player'], 3, 2, gs.SIZE)
