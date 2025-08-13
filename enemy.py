@@ -116,7 +116,10 @@ class Enemy(pygame.sprite.Sprite):
   def animate(self):
     if pygame.time.get_ticks() - self.anim_timer >= self.anim_frame_time:
       self.index += 1
+      if self.destroyed and self.index == len(self.image_dict[self.action]):
+        self.kill()
       
+
 
   def destroy(self):
     pass
