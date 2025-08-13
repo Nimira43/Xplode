@@ -97,3 +97,4 @@ class Game:
     if player_x_pos >= 576 and player_x_pos <= 1280:
       self.camera_x_offset = player_x_pos - 576    
 
+  def insert_enemies_into_level(): pass
