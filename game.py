@@ -2,7 +2,7 @@ import pygame
 from character import Character
 from enemy import Enemy
 from blocks import Hard_Block, Soft_Block 
-from random import choice
+from random import choice, randint
 import gamesettings as gs
 
 class Game:
@@ -103,4 +103,9 @@ class Game:
     pl_row = self.player.row_num
 
     for enemy in enemies_list:
-      pass
+      valid_choice = False
+      while not valid_choice:
+        row = randint(0, gs.ROWS)
+        col = randint(0, gs.COLS)
+
+      
