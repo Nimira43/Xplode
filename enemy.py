@@ -113,9 +113,10 @@ class Enemy(pygame.sprite.Sprite):
       directions.append('left')
     return
     
-
   def animate(self):
-    pass
+    if pygame.time.get_ticks() - self.anim_timer >= self.anim_frame_time:
+      self.index += 1
+      
 
   def destroy(self):
     pass
