@@ -108,4 +108,6 @@ class Game:
         row = randint(0, gs.ROWS)
         col = randint(0, gs.COLS)
 
-      
+        if row in [pl_row - 3, pl_row - 2, pl_row - 1, pl_row, pl_row + 1, pl_row + 2, pl_row + 3] and \
+        col in [pl_col - 3, pl_col - 2, pl_col - 1, pl_col, pl_col + 1, pl_col + 2, pl_col + 3]:
+          continue
