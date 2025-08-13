@@ -14,6 +14,7 @@ class Assets:
 
     for image_list in ['right_end', 'right_mid', 'down_end', 'down_mid']:
       self.rotate_images_in_list(self.explosions[image_list], 180)
+    self.ballom = self.load_sprite_range(gs.BALLOM, self.spritesheet)
 
   def load_sprite_sheet(self, path, filename, width, height):
     image = pygame.image.load(f"{path}/{filename}").convert_alpha()
