@@ -97,4 +97,10 @@ class Game:
     if player_x_pos >= 576 and player_x_pos <= 1280:
       self.camera_x_offset = player_x_pos - 576    
 
-  def insert_enemies_into_level(): pass
+  def insert_enemies_into_level(self, matrix): 
+    enemies_list = ['bollom' for i in range(10)]
+    pl_col = self.player.col_num
+    pl_row = self.player.row_num
+
+    for enemy in enemies_list:
+      pass
