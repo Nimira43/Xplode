@@ -121,8 +121,9 @@ class Enemy(pygame.sprite.Sprite):
       self.index = self.index % len(self.image_dict[self.action])
       self.image = self.image_dict[self.action][self.index]
       self.anim_timer = pygame.time.get_ticks()
-      
-
-
+     
   def destroy(self):
-    pass
+    self.destroyed = True
+    self.index = 0
+    self.action = 'death'
+    self.image = self.image_dict[self.action][self.index]
