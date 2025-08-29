@@ -56,7 +56,10 @@ class Soft_Block(Blocks):
         if pygame.sprite.collider_mask(self, enemy):
           enemy.destroy()
 
-      
+      if self.rect.collidrect(self.GAME.player):
+        if pygame.sprite.collide_mask(self, self.GAME.player):
+          self.GAME.player.alive = False
+          self.GAME.player.action = 'dead_anim'
   
   def destroy_soft_block(self):
     if not self.destroyed:
