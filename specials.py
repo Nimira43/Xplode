@@ -39,32 +39,37 @@ class Special(pygame.sprite.Sprite):
     window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
   def bomb_up_special(self, player): 
-    pass
+    player.bomb_limit += 1
 
   def fire_up_special(self, player):
-    pass
+    player.power += 1
   
   def speed_up_special(self, player):
-    pass
+    player.speed += 1
   
   def wall_hack_special(self, player):
-    pass
+    player.wall_hack = True
   
   def remote_special(self, player):
-    pass
-  
+    player.remote = True
+   
   def bomb_hack_special(self, player):
-    pass
+    player.bomb_hack = True
   
   def flame_pass_special(self, player):
-    pass
+    player.flame_pass = True
   
   def invincible_special(self, player):
-    pass
+    player.invincibility = True
+    player.invincibility_timer = pygame.time.get_ticks()
   
   def end_stage(self, player):
-    pass
+    if len(self.GAME.groups['enemies'].sprites()) > 0:
+      return
+    self.GAME.new_stage()
   
   def hit_by_explosion(self):
-    pass
-  
+    enemies = []
+    for _ in range(10):
+      enemies.append(gs.SPECIAL_CONNECTIONS[self.name])
+    self.GAME.insert_enemies_into_level(self.GAME.level_matrix, enemies)  
