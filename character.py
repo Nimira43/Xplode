@@ -88,6 +88,7 @@ class Character(pygame.sprite.Sprite):
 
     self.collision_detection_items(self.GAME.groups['hard_block'])
     self.collision_detection_items(self.GAME.groups['soft_block'])
+    self.collision_detection_items(self.GAME.groups['bomb'])
 
     self.GAME.update_x_camera_offset_player_position(self.rect.x)
 
