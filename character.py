@@ -162,7 +162,7 @@ class Bomb(pygame.sprite.Sprite):
     self.index = 0
     self.image_list = image_list
     self.image = self.image_list[self.index]
-    self.rect = self.image.get_Rect(topleft=(self.x, self.y))
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
     self.anim_length = len(self.image_list)
     self.anim_frame_time = 200
