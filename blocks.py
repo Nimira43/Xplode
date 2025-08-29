@@ -69,3 +69,7 @@ class Soft_Block(Blocks):
 
   def __repr__(self):
     return "'@'"
+  
+class Special_Soft_Block(Soft_Block):
+  def __init__():
+    pass
