@@ -81,6 +81,7 @@ class Special_Soft_Block(Soft_Block):
     super().kill()
     self.place_special_block()
 
-  def place_special_block():
-    pass
+  def place_special_block(self):
+    special_cell = Special(self.GAME, self.GAME.ASSETS.special[self.special_type][0], self.special_type, self.GAME.groups['specials'], self.row, self.col, self.size)
+    self.GAME.level_matrix[self.row][self.col] = special_cell
 
