@@ -27,7 +27,13 @@ class Special(pygame.sprite.Sprite):
       }
 
   def update(self):
-    pass
+    if self.GAME.player.rect.collidepoint(self.rect.center):
+      self.power_up_activate[self.name](self.GAME.player)
+      if self.name == 'exit':
+        return
+      self.GAME.level_matrix[self.row][self.col] = '_'
+      self.kill()
+      return
 
   def draw(self, window, x_offset):
     pass
