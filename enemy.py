@@ -63,7 +63,7 @@ class Enemy(pygame.sprite.Sprite):
         if direction == 'right' and self.rect.left < block.rect.left:
           self.x = block.rect.left - self.size
           return direction
-        if direction == 'up' and self.rect.bottom < block.rect.bottom:
+        if direction == 'up' and self.rect.bottom > block.rect.bottom:
           self.y = block.rect.bottom
           return direction
         if direction == 'down' and self.rect.top < block.rect.top:
@@ -89,7 +89,7 @@ class Enemy(pygame.sprite.Sprite):
     row = int((self.y - gs.Y_OFFSET) // self.size)
     col = int(self.x // self.size)
 
-    if row % 2 == 0 or col % 3 == 0:
+    if row % 2 == 0 or col % 2 == 0:
       return
     
     self.determine_if_direction_valid(direction_list, row, col)
