@@ -36,7 +36,7 @@ class Special(pygame.sprite.Sprite):
       return
 
   def draw(self, window, x_offset):
-    pass
+    window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
   def bomb_up_special(self, player): 
     pass
