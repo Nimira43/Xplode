@@ -72,7 +72,7 @@ class Soft_Block(Blocks):
   
 class Special_Soft_Block(Soft_Block):
   def __init__(self, game, images, group, row_num, col_num, size, special_type):
-    pass
+    super().__init__(game, images, group, row_num, col_num, size)
 
   def kill(self):
     super().kill()
