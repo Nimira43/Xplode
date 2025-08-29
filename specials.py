@@ -14,6 +14,17 @@ class Special(pygame.sprite.Sprite):
     self.image = image
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
+    self.power_up_activate = {
+      'bomb_up': self.bomb_up_special,
+      'fire_up': self.fire_up_special,
+      'speed_up': self.speed_up_special,
+      'wall_hack': self.wall_hack_special,
+      'remote': self.remote_special,
+      'bomb_pass': self.bomb_hack_special,
+      'flame_pass': self.flame_pass_special,
+      'invincible': self.invincible_special,
+      'exit': self.bomb_up_special
+      }
 
   def update(self):
     pass
