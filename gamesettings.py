@@ -102,4 +102,12 @@ SPECIALS = {'bomb_up': [(3, 8)],
             'invincible': [(4, 11)],
             'exit': [(1, 11)]}
 
-SPECIAL_CONNECTIONS = {}
+SPECIAL_CONNECTIONS = {'bomb_up': 'ballam',
+            'fire_up': 'onil',
+            'speed_up': 'dahl',
+            'wall_hack': 'minvo',
+            'remote': 'doria',
+            'bomb_pass': 'ovape',
+            'flame_pass': 'pass',
+            'invincible': 'pontan',
+            'exit': 'pontan'}
