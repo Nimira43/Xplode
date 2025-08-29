@@ -3,6 +3,18 @@ SCREENHEIGHT = 892
 FPS = 60
 Y_OFFSET = 92
 
+ENEMIES = {
+  'ballom': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'onil': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'dahl': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'minvo': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'doria': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'ovape': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'pass': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'pontan': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False}
+}
+
+
 SIZE = 64
 ROWS = 12
 COLS = 30
