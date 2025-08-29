@@ -73,3 +73,11 @@ class Soft_Block(Blocks):
 class Special_Soft_Block(Soft_Block):
   def __init__():
     pass
+
+  def kill():
+    pass
+
+  def place_special_block():
+    pass
+
+  
