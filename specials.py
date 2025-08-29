@@ -1,1 +1,3 @@
-i
+import pygame
+import gamesettings as gc
+
