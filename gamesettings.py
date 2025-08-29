@@ -5,13 +5,13 @@ Y_OFFSET = 92
 
 ENEMIES = {
   'ballom': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'onil': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'dahl': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'minvo': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'doria': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'ovape': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'pass': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
-  'pontan': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False}
+  'onil': {'speed': 2, 'wall_hack': False, 'chase_player': True, 'LoS': 4, 'see_player_hack': False},
+  'dahl': {'speed': 2, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
+  'minvo': {'speed': 2, 'wall_hack': False, 'chase_player': True, 'LoS': 4, 'see_player_hack': True},
+  'doria': {'speed': 0.5, 'wall_hack': True, 'chase_player': True, 'LoS': 6, 'see_player_hack': True},
+  'ovape': {'speed': 1, 'wall_hack': True, 'chase_player': True, 'LoS': 8, 'see_player_hack': False},
+  'pass': {'speed': 2, 'wall_hack': True, 'chase_player': True, 'LoS': 12, 'see_player_hack': False},
+  'pontan': {'speed': 4, 'wall_hack': True, 'chase_player': True, 'LoS': 30, 'see_player_hack': False}
 }
 
 
