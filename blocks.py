@@ -74,6 +74,9 @@ class Special_Soft_Block(Soft_Block):
   def __init__(self, game, images, group, row_num, col_num, size, special_type):
     super().__init__(game, images, group, row_num, col_num, size)
 
+    self.special_type = special_type
+    print((self.row, self.col))
+
   def kill(self):
     super().kill()
     self.place_special_block()
