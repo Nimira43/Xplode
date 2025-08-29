@@ -53,6 +53,10 @@ class Soft_Block(Blocks):
           continue
         if not self.rect.colliderect(enemy):
           continue
+        if pygame.sprite.collider_mask(self, enemy):
+          enemy.destroy()
+
+      
   
   def destroy_soft_block(self):
     if not self.destroyed:
