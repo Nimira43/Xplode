@@ -47,6 +47,12 @@ class Soft_Block(Blocks):
           self.kill()
         self.image = self.image_list[self.image_index]
         self.anim_timer = pygame.time.get_ticks()
+
+      for enemy in self.GAME.groups['enemies']:
+        if enemy.destroyed:
+          continue
+        if not self.rect.colliderect(enemy):
+          continue
   
   def destroy_soft_block(self):
     if not self.destroyed:
