@@ -71,7 +71,7 @@ class Soft_Block(Blocks):
     return "'@'"
   
 class Special_Soft_Block(Soft_Block):
-  def __init__():
+  def __init__(self, game, images, group, row_num, col_num, size, special_type):
     pass
 
   def kill(self):
