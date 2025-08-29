@@ -1,10 +1,19 @@
 import pygame
-import gamesettings as gc
+import gamesettings as gs
 
 class Special(pygame.sprite.Sprite):
   def __init__(self, game, image, name, group, row_num, col_num, size):
     super().__init__(group)
-    pass
+    self.GAME = game
+    self.name = name
+    self.row = row_num
+    self.col = col_num
+    self.size = size
+    self.x = self.col * self.size
+    self.y = (self.col * self.size) * gs.Y_OFFSET
+    self.image = image
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+
 
   def update(self):
     pass
