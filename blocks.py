@@ -1,4 +1,5 @@
 import pygame
+from specials import Special
 import gamesettings as gs
 
 class Blocks(pygame.sprite.Sprite):
