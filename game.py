@@ -107,6 +107,12 @@ class Game:
 
       if row == 0 or row == len(matrix) - 1 or col == 0 or col == len(matrix[0]) - 1:
         continue
+      elif row % 2 == 0 and col % 2 == 0:
+        continue
+      elif row in [2, 3, 4] and col in [1, 2, 3]:
+        continue
+      elif matrix[row][col] != '_':
+        continue
     
 
   def update_x_camera_offset_player_position(self, player_x_pos):
