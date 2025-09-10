@@ -186,6 +186,11 @@ class Game:
   def select_a_special(self):
     specials = list(gs.SPECIALS.keys())
     specials.remove('exit')
+
+    if self.level == 4:
+      power_up = 'speed_up'
+    elif self.level == 1:
+      power_up = 'bomb_up'
     
   
   def new_stage(self):
