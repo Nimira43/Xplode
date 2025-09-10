@@ -170,9 +170,18 @@ class Game:
       self.add_enemies_to_list(5, 3, 2, enemies, enemies_list)
     elif self.level <= 45: 
       self.add_enemies_to_list(4, 4, 2, enemies, enemies_list)
-  
-  def add_enemies_to_list(self, num_1, num_2, num3, enemies, enemies_list):
-    pass
+    else: 
+      self.add_enemies_to_list(3, 4, 4, enemies, enemies_list)
+    return enemies_list
+
+  def add_enemies_to_list(self, num_1, num_2, num_3, enemies, enemies_list):
+    for num in range(num_1):
+      enemies_list.append('ballom')
+    for num in range(num_2):
+      enemies_list.append(enemies[(self.level % 9)])
+    for num in range(num_3):
+      enemies_list.append(choice(list(enemies.values())))
+    return
 
   def select_a_special(self):
     pass
