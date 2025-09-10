@@ -113,7 +113,11 @@ class Game:
         continue
       elif matrix[row][col] != '_':
         continue
-    
+      else:
+        valid = True
+
+    cell = Special_Soft_Block(self, self.ASSETS.soft_block['soft_block'], self.groups['soft_block'], row, col, gs.SIZE, power_up)
+    matrix[row][col] = cell 
 
   def update_x_camera_offset_player_position(self, player_x_pos):
     if player_x_pos >= 576 and player_x_pos <= 1280:
