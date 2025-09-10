@@ -137,7 +137,8 @@ class Character(pygame.sprite.Sprite):
     self.y = (self.row_num * self.size) + gs.Y_OFFSET
 
   def set_player_images(self):
-    pass
+    self.image = self.image_dict[self.action][self.index]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
   def set_player(self, image_dict):
     self.set_player_position()
