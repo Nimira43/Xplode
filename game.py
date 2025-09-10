@@ -97,8 +97,10 @@ class Game:
           matrix[row_num][col_num] = cell
     return      
 
-  def insert_power_up_into_matrix():
-    pass
+  def insert_power_up_into_matrix(self, matrix, special):
+    power_up = special
+    valid = False
+    
 
   def update_x_camera_offset_player_position(self, player_x_pos):
     if player_x_pos >= 576 and player_x_pos <= 1280:
