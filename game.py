@@ -193,6 +193,10 @@ class Game:
       power_up = 'bomb_up'
     elif self.player.bomb_limit <= 2 or self.player.power <= 2:
       power_up = choice(['bomb_up', 'fire_up'])
-  
+    else:
+      if self.player.wall_hack:
+        specials.remove('wall_hack')
+
+
   def new_stage(self):
     pass
