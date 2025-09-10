@@ -210,4 +210,9 @@ class Game:
     return power_up
   
   def new_stage(self):
-    pass
+    self.level += 1
+    self.level_special = self.select_a_special()
+    self.player.set_player_position()
+    self.player.set_player_images()
+    self.regenerate_stage()
+    print(self.level)
