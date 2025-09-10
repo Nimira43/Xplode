@@ -105,7 +105,8 @@ class Game:
       row = randint(0, gs.ROWS)
       col = randint(0, gs.COLS)
 
-      
+      if row == 0 or row == len(matrix) - 1 or col == 0 or col == len(matrix[0]) - 1:
+        continue
     
 
   def update_x_camera_offset_player_position(self, player_x_pos):
