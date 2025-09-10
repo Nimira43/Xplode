@@ -157,7 +157,19 @@ class Game:
     self.camera_x_offset = 0
 
   def select_enemies_to_spawn(self):
-    pass
+    enemies_list = []
+    enemies = {0: 'ballom', 1: 'ballom', 2: 'onil', 3: 'dahl', 4: 'minvo', 5: 'doria', 6: 'ovape', 7: 'pass', 8: 'pontan'}
+
+    if self.level <= 8: 
+      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
+    elif self.level <= 8: 
+      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
+    elif self.level <= 8: 
+      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
+    elif self.level <= 8: 
+      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
+    elif self.level <= 8: 
+      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
   
   def add_enemies_to_list(self, num_1, num_2, num3, enemies, enemies_list):
     pass
