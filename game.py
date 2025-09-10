@@ -151,6 +151,10 @@ class Game:
         continue
       self.groups[key].empty()
 
+    self.level_matrix.clear()
+    self.level_matrix = self.generate_level_matrix(gs.ROWS, gs.COLS)
+    self.camera_x_offset = 0
+
   def select_enemies_to_spawn(self):
     pass
   
