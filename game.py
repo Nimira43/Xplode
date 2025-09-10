@@ -196,6 +196,16 @@ class Game:
     else:
       if self.player.wall_hack:
         specials.remove('wall_hack')
+      if self.player.remote_detonate:
+        specials.remove('remote')
+      if self.player.bomb_hack:
+        specials.remove('bomb_pass')
+      if self.player.flame_hack:
+        specials.remove('flame_pass')
+      if self.player.bomb_limit == 10:
+        specials.remove('bomb_u[]')
+      if self.player.power == 10:
+        specials.remove('fire_up')
 
 
   def new_stage(self):
