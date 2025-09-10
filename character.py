@@ -187,6 +187,11 @@ class Character(pygame.sprite.Sprite):
   def deadly_collisions(self, group):
     if not self.alive:
       return
+    
+    for item in group:
+      if not self.rect.colliderect(item.rect):
+        continue 
+      
 
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
