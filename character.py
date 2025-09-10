@@ -49,7 +49,9 @@ class Character(pygame.sprite.Sprite):
     if not self.invincibility:
       return
     
-    
+    if pygame.time.get_ticks() - self.invincibility_timer >= 20000:
+      self.invincibility = False
+      self.invincibility_timer = None
 
   def draw(self, window, offset):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
