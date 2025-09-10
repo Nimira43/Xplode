@@ -184,7 +184,9 @@ class Game:
     return
 
   def select_a_special(self):
-    pass
+    specials = list(gs.SPECIALS.keys())
+    specials.remove('exit')
+    
   
   def new_stage(self):
     pass
