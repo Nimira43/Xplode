@@ -145,8 +145,17 @@ class Game:
         else:
           continue
   
-  def regenerate_stage():pass
-  def select_enemies_to_spawn():pass
-  def add_enemies_to_list():pass
-  def select_a_special():pass
-  def add_enemies_to_list():pass
+  def regenerate_stage(self):
+    pass
+
+  def select_enemies_to_spawn(self):
+    pass
+  
+  def add_enemies_to_list(self, num_1, num_2, num3, enemies, enemies_list):
+    pass
+
+  def select_a_special(self):
+    pass
+  
+  def new_stage(self):
+    pass
