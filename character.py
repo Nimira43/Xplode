@@ -191,7 +191,11 @@ class Character(pygame.sprite.Sprite):
     for item in group:
       if not self.rect.colliderect(item.rect):
         continue 
-      
+      if pygame.sprite.collide_mask(self, item):
+        self.action = 'dead_anim'
+        self.alive = False 
+        return
+
 
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
