@@ -38,7 +38,9 @@ class Character(pygame.sprite.Sprite):
       self.move('walk_down')
 
   def update(self):
-    pass
+    if self.invincibility == False:
+      if len(self.GAME.groups['explosions']) > 0 and self.flame_pass == False:
+        self.deadly_collisions(self.GAME.groups['explosions'])
 
   def draw(self, window, offset):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
