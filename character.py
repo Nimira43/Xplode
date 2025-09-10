@@ -177,7 +177,12 @@ class Character(pygame.sprite.Sprite):
     self.set_player_images()
 
   def reset_player(self):
-    pass
+    self.lives -= 1
+    if self.lives < 0:
+      self.GAME.MAIN.run = False
+      return
+    self.GAME.regenerate_stage()
+    self.set_player(self.image_dict)
 
   def deadly_collisions(self, group):
     pass
