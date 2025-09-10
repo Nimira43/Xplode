@@ -144,3 +144,9 @@ class Game:
           Enemy(self, self.ASSETS.enemies[enemy], self.groups['enemies'], enemy, row, col, gs.SIZE)
         else:
           continue
+  
+  def regenerate_stage():pass
+  def select_enemies_to_spawn():pass
+  def add_enemies_to_list():pass
+  def select_a_special():pass
+  def add_enemies_to_list():pass
