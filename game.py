@@ -146,7 +146,10 @@ class Game:
           continue
   
   def regenerate_stage(self):
-    pass
+    for key in self.groups.keys():
+      if key == 'player':
+        continue
+      self.groups[key].empty()
 
   def select_enemies_to_spawn(self):
     pass
