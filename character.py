@@ -41,6 +41,7 @@ class Character(pygame.sprite.Sprite):
     if self.invincibility == False:
       if len(self.GAME.groups['explosions']) > 0 and self.flame_pass == False:
         self.deadly_collisions(self.GAME.groups['explosions'])
+      self.deadly_collisions(self.GAME.groups['enemies'])
 
   def draw(self, window, offset):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
@@ -159,6 +160,10 @@ class Character(pygame.sprite.Sprite):
     self.anim_time_set = pygame.time.get_ticks()
     self.image_dict = image_dict
     self.set_player_images()
+
+
+  def deadly_collisions(self, group):
+    pass
 
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
