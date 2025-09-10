@@ -43,6 +43,14 @@ class Character(pygame.sprite.Sprite):
         self.deadly_collisions(self.GAME.groups['explosions'])
       self.deadly_collisions(self.GAME.groups['enemies'])
 
+    if self.action == 'dead_anim':
+      self.animate(self.action)
+
+    if not self.invincibility:
+      return
+    
+    
+
   def draw(self, window, offset):
     window.blit(self.image, (self.rect.x - offset, self.rect.y))
     pygame.draw.rect(window, gs.RED, (self.rect.x - offset, self.rect.y, 64, 64), 1)
