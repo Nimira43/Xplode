@@ -162,14 +162,14 @@ class Game:
 
     if self.level <= 8: 
       self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
-    elif self.level <= 8: 
-      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
-    elif self.level <= 8: 
-      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
-    elif self.level <= 8: 
-      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
-    elif self.level <= 8: 
-      self.add_enemies_to_list(8, 2, 0, enemies, enemies_list)
+    elif self.level <= 17: 
+      self.add_enemies_to_list(7, 2, 1, enemies, enemies_list)
+    elif self.level <= 26: 
+      self.add_enemies_to_list(6, 3, 1, enemies, enemies_list)
+    elif self.level <= 35: 
+      self.add_enemies_to_list(5, 3, 2, enemies, enemies_list)
+    elif self.level <= 45: 
+      self.add_enemies_to_list(4, 4, 2, enemies, enemies_list)
   
   def add_enemies_to_list(self, num_1, num_2, num3, enemies, enemies_list):
     pass
