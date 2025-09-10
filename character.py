@@ -161,6 +161,8 @@ class Character(pygame.sprite.Sprite):
     self.image_dict = image_dict
     self.set_player_images()
 
+  def reset_player(self):
+    pass
 
   def deadly_collisions(self, group):
     pass
