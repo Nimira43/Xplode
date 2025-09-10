@@ -1,7 +1,7 @@
 import pygame
 from character import Character
 from enemy import Enemy
-from blocks import Hard_Block, Soft_Block 
+from blocks import Hard_Block, Soft_Block, Special_Soft_Block 
 from random import choice, randint
 import gamesettings as gs
 
@@ -14,6 +14,7 @@ class Game:
     self.groups = {'hard_block': pygame.sprite.Group(),
                    'soft_block': pygame.sprite.Group(),
                    'bomb': pygame.sprite.Group(),
+                   'specials': pygame.sprite.Group(),
                    'explosions': pygame.sprite.Group(),
                    'enemies': pygame.sprite.Group(),
                    'player': pygame.sprite.Group()}
@@ -21,6 +22,7 @@ class Game:
     self.player = Character(self, self.ASSETS.player_char, self.groups['player'], 3, 2, gs.SIZE)
 
     self.level = 1
+    self.level_special = self.select_a_special()
     self.level_matrix = self.generate_level_matrix(gs.ROWS, gs.COLS)
 
   def input(self):
