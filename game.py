@@ -206,7 +206,8 @@ class Game:
         specials.remove('bomb_u[]')
       if self.player.power == 10:
         specials.remove('fire_up')
-
-
+      power_up = choice(specials)
+    return power_up
+  
   def new_stage(self):
     pass
