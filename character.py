@@ -8,8 +8,7 @@ class Character(pygame.sprite.Sprite):
     self.row_num = row_num
     self.col_num = col_num
     self.size = size
-    self.x = self.col_num * self.size
-    self.y = (self.row_num * self.size) + gs.Y_OFFSET
+    
     
     self.action = 'walk_left'
     self.bombs_planted = 0
@@ -140,7 +139,8 @@ class Character(pygame.sprite.Sprite):
       self.y = bottom_y
 
   def set_player_position(self):
-    pass
+    self.x = self.col_num * self.size
+    self.y = (self.row_num * self.size) + gs.Y_OFFSET
 
   def set_player_images(self):
     pass
