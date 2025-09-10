@@ -10,11 +10,7 @@ class Character(pygame.sprite.Sprite):
     self.size = size
     self.x = self.col_num * self.size
     self.y = (self.row_num * self.size) + gs.Y_OFFSET
-    self.alive = True
-    self.speed = 3
-    self.bomb_limit = 2
-    self.remote = True
-    self.power = 2
+    
     self.action = 'walk_left'
     self.bombs_planted = 0
     self.index = 0
@@ -142,6 +138,20 @@ class Character(pygame.sprite.Sprite):
       self.y = top_y
     elif self.y > bottom_y:
       self.y = bottom_y
+
+  def set_player_position(self):
+    pass
+
+  def set_player_images(self):
+    pass
+
+  def set_player(self, image_dict):
+    self.set_player_position()
+    self.alive = True
+    self.speed = 3
+    self.bomb_limit = 2
+    self.remote = True
+    self.power = 2
 
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
