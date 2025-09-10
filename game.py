@@ -141,6 +141,6 @@ class Game:
 
         elif matrix[row][col] == '_':
           valid_choice = True
-          Enemy(self, self.ASSETS.ballom, self.groups['enemies'], row, col, gs.SIZE)
+          Enemy(self, self.ASSETS.enemies[enemy], self.groups['enemies'], enemy, row, col, gs.SIZE)
         else:
           continue
