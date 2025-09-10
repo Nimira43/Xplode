@@ -318,10 +318,12 @@ class Explosion(pygame.sprite.Sprite):
         elif self.GAME.level_matrix[dir[0]][dir[1]] in self.GAME.groups['soft_block'].sprites():
           self.GAME.level_matrix[dir[0]][dir[1]].destroy_soft_blocks()
           valid_directions[ind] = False
+        elif self.GAME.level_matrix[dir[0]][dir[1]] in self.GAME.groups['specials'].sprites():
+          self.GAME.level_matrix[dir[0]][dir[1]].hit_by_explosions()
+          valid_directions[ind] = False
         else:
           valid_directions[ind] = False
-          continue
-        
+          continue   
 
   def calculate_direction_cells(self, cell):
     left = (self.row_num, self.col_num - (cell + 1),
