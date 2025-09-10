@@ -62,6 +62,9 @@ class Character(pygame.sprite.Sprite):
       self.index += 1
       if self.index == len(self.image_dict[action]):
         self.index = 0
+        if self.action == 'dead_anim':
+          self.reset_player()
+          return
 
       self.image = self.image_dict[action][self.index]
       self.anim_time_set = pygame.time.get_ticks()
