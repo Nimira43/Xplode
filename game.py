@@ -62,6 +62,8 @@ class Game:
       matrix.append(line)
     self.insert_hard_blocks_into_matrix(matrix)
     self.insert_soft_blocks_into_matrix(matrix)
+    self.insert_power_up_into_matrix(matrix, self.level_special)
+    self.insert_power_up_into_matrix(matrix, 'exit')
     self.insert_enemies_into_level(matrix)
     for row in matrix:
       print(row)
