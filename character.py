@@ -10,13 +10,7 @@ class Character(pygame.sprite.Sprite):
     self.size = size
     
     
-    self.action = 'walk_left'
-    self.bombs_planted = 0
-    self.index = 0
-    self.anim_time = 50
-    self.anim_time_set = pygame.time.get_ticks()
-    self.image_dict = image_dict
-    self.image = self.image_dict[self.action][self.index]
+    
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
   def input(self):
@@ -151,7 +145,19 @@ class Character(pygame.sprite.Sprite):
     self.speed = 3
     self.bomb_limit = 2
     self.remote = True
-    self.power = 2
+    self.power = 1
+    self.wall_hack = True
+    self.bomb_hack = True
+    self.flame_pass = True
+    self.invincibility = False
+    self.invincibility_timer = None
+    self.action = 'walk_right'
+    self.bombs_planted = 0
+    self.index = 0
+    self.anim_time = 50
+    self.anim_time_set = pygame.time.get_ticks()
+    self.image_dict = image_dict
+    self.set_player_images()
 
 class Bomb(pygame.sprite.Sprite):
   def __init__(self, game, image_list, group, power, row_num, col_num, size, remote):
