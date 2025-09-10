@@ -100,6 +100,12 @@ class Game:
   def insert_power_up_into_matrix(self, matrix, special):
     power_up = special
     valid = False
+
+    while not valid:
+      row = randint(0, gs.ROWS)
+      col = randint(0, gs.COLS)
+
+      
     
 
   def update_x_camera_offset_player_position(self, player_x_pos):
