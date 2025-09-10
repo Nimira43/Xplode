@@ -97,6 +97,9 @@ class Game:
           matrix[row_num][col_num] = cell
     return      
 
+  def insert_power_up_into_matrix():
+    pass
+
   def update_x_camera_offset_player_position(self, player_x_pos):
     if player_x_pos >= 576 and player_x_pos <= 1280:
       self.camera_x_offset = player_x_pos - 576    
