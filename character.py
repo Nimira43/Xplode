@@ -8,10 +8,8 @@ class Character(pygame.sprite.Sprite):
     self.row_num = row_num
     self.col_num = col_num
     self.size = size
-    
-    
-    
-    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+    self.set_player(image_dict)
+    self.lives = 3
 
   def input(self):
     for event in pygame.event.get():
