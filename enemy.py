@@ -32,9 +32,10 @@ class Enemy(pygame.sprite.Sprite):
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
     self.start_pos = self.rect.center
     self.end_pos = self.GAME.player.rect_center
-    
+
   def update(self):
     self.movement()
+    self.update_line_of_sight_with_player()
     self.animate()
 
   def draw(self, window, x_offset):
@@ -130,3 +131,16 @@ class Enemy(pygame.sprite.Sprite):
     self.index = 0
     self.action = 'death'
     self.image = self.image_dict[self.action][self.index]
+
+  def update_line_of_sight_with_player(self):
+    pass
+
+  def chase_the_player(self):
+    pass
+
+  def check_LoS_distance(self):
+    pass
+
+  def intersecting_items_with_Los(self, group):
+    pass
+  
