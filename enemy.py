@@ -113,7 +113,8 @@ class Enemy(pygame.sprite.Sprite):
     if row % 2 == 0 or col % 2 == 0:
       return
     
-    self.determine_if_direction_valid(direction_list, row, col)
+    if self.wall_hack == False:
+      self.determine_if_direction_valid(direction_list, row, col)
 
     new_direction = choice(direction_list)
     self.action = f'walk_{new_direction}'
