@@ -172,7 +172,13 @@ class Enemy(pygame.sprite.Sprite):
       self.change_dir_timer = pygame.time.get_ticks()  
 
   def check_LoS_distance(self):
-    pass
+    x_dist = abs(self.end_pos[0] - self.start_pos[0])
+    y_dist = abs(self.end_pos[1] - self.start_pos[1])
+
+    if x_dist > self.LoS or y_dist > self.LoS:
+      return True
+    
+    return False
 
   def intersecting_items_with_LoS(self, group):
     pass
