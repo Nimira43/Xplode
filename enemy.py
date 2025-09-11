@@ -166,6 +166,10 @@ class Enemy(pygame.sprite.Sprite):
       self.action = 'walk_right'
     elif enemy_row > player_row and (self.x % self.size) + 32 == self.size // 2:
       self.action = 'walk_up'
+    elif enemy_row < player_row and (self.x % self.size) + 32 == self.size // 2:
+      self.action = 'walk_down'
+
+      self.change_dir_timer = pygame.time.get_ticks()  
 
   def check_LoS_distance(self):
     pass
