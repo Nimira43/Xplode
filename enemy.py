@@ -155,7 +155,10 @@ class Enemy(pygame.sprite.Sprite):
     self.end_pos = self.GAME.player.rect.center
 
   def chase_the_player(self):
-    pass
+    enemy_col = self.start_pos[0] // self.size
+    enemy_row = self.start_pos[1] // self.size
+    player_col = self.end_pos[0] // self.size
+    player_row = self.end_pos[1] // self.size
 
   def check_LoS_distance(self):
     pass
