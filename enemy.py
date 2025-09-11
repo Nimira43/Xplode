@@ -54,8 +54,14 @@ class Enemy(pygame.sprite.Sprite):
 
     directions = ['left', 'right', 'up', 'down']
     self.new_direction(self.GAME.groups['hard_block'], move_direction, directions)
-    self.new_direction(self.GAME.groups['soft_block'], move_direction, directions)
+    
+    if self.wall_hack == False: 
+      self.new_direction(self.GAME.groups['soft_block'], move_direction, directions)
+    
     self.new_direction(self.GAME.groups['bomb'], move_direction, directions)
+
+    
+    
     self.change_directions(directions)
     self.rect.update(self.x, self.y, self.size, self.size)
 
