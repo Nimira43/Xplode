@@ -162,6 +162,8 @@ class Enemy(pygame.sprite.Sprite):
 
     if enemy_col > player_col and ((self.y - gs.Y_OFFSET) % self.size) + 32 == self.size // 2:
       self.action = 'walk_left'
+    elif enemy_col < player_col and ((self.y - gs.Y_OFFSET) % self.size) + 32 == self.size // 2:
+      self.action = 'walk_right'
 
   def check_LoS_distance(self):
     pass
