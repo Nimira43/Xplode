@@ -3,14 +3,15 @@ import gamesettings as gs
 from random import choice
 
 class Enemy(pygame.sprite.Sprite):
-  def __init__(self, game, image_dict, group, row_num, col_num, size):
+  def __init__(self, game, image_dict, group, type, row_num, col_num, size):
     super().__init__(group)
     self.GAME = game
-    self.speed = 1
-    self.wall_hack = False
-    self.chase_player = False
-    self.LoS = 0
-    self.see_player_hack = False
+    self.type = type
+    self.speed = gs.ENEMIES[self.type]['speed']
+    self.wall_hack = gs.ENEMIES[self.type]['wall_hack']
+    self.chase_player = gs.ENEMIES[self.type]['chase_player']
+    self.LoS = gs.ENEMIES[self.type]['LoS'] * size
+    self.see_player_hack = gs.ENEMIES[self.type]['see_player_hack']
     self.row = row_num
     self.col = col_num
     self.size = size
@@ -29,7 +30,9 @@ class Enemy(pygame.sprite.Sprite):
     self.anim_timer = pygame.time.get_ticks()
     self.image = self.image_dict[self.action][self.index]
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
-
+    self.start_pos = self.rect.center
+    self.end_pos = self.GAME.player.rect_center
+    
   def update(self):
     self.movement()
     self.animate()
