@@ -31,7 +31,7 @@ class Enemy(pygame.sprite.Sprite):
     self.image = self.image_dict[self.action][self.index]
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
     self.start_pos = self.rect.center
-    self.end_pos = self.GAME.player.rect_center
+    self.end_pos = self.GAME.player.rect.center
 
   def update(self):
     self.movement()
