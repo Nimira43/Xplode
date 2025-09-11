@@ -181,5 +181,8 @@ class Enemy(pygame.sprite.Sprite):
     return False
 
   def intersecting_items_with_LoS(self, group):
-    pass
+    for item in self.GAME.groups[group]:
+      if item.rect.clipline(self.start_pos, self.end_pos):
+        return True
+    return False
   
