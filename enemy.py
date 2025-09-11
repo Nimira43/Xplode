@@ -60,7 +60,13 @@ class Enemy(pygame.sprite.Sprite):
     
     self.new_direction(self.GAME.groups['bomb'], move_direction, directions)
 
-    
+    if self.chase_player:
+      if self.check_LoS_distance():
+        pass
+      elif self.intersecting_items_with_LoS('hard_block'):
+        pass
+      elif self.intersecting_items_with_LoS('soft_block') and self.see_player_hack == False:
+        pass
     
     self.change_directions(directions)
     self.rect.update(self.x, self.y, self.size, self.size)
@@ -148,6 +154,6 @@ class Enemy(pygame.sprite.Sprite):
   def check_LoS_distance(self):
     pass
 
-  def intersecting_items_with_Los(self, group):
+  def intersecting_items_with_LoS(self, group):
     pass
   
