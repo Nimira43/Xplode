@@ -67,6 +67,10 @@ class Enemy(pygame.sprite.Sprite):
         pass
       elif self.intersecting_items_with_LoS('soft_block') and self.see_player_hack == False:
         pass
+      elif self.intersecting_items_with_LoS('bomb') and self.see_player_hack == False:
+        pass
+      else:
+        self.chase_the_player()
     
     self.change_directions(directions)
     self.rect.update(self.x, self.y, self.size, self.size)
