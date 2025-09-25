@@ -114,3 +114,6 @@ SPECIAL_CONNECTIONS = {'bomb_up': 'ballam',
             'exit': 'pontan'}
 
 TIME_WORD = {'time_word': [(13, 4)]}
+LEFT_WORD = {'left_word': [(13, 0)]}
+STAGE_WORD = {'stage_word': [(14, 0)]}
+NUMBERS_BLACK = {}
