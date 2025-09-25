@@ -20,4 +20,6 @@ class InfoPanel:
   def update_score_image():
     pass
 
-  
+class Scoring():
+  def __init__():
+    pass  
