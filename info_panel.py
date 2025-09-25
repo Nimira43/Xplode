@@ -81,5 +81,5 @@ class Scoring():
       self.GAME.player.update_score(self.score)
 
   def draw(self, window, x_offset):
-    pass
+    window.blit(self.image, (self.rect.x - x_offset, self.rect.y))
 
