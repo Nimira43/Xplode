@@ -40,6 +40,9 @@ class InfoPanel:
     window.blit(self.time_word_image, self.time_word_rect)
     start_x = 192 if len(self.time_image) == 3 else 224 if len(self.time_image) == 2 else 256
 
+    for num, image in enumerate(self.time_image):
+      window.blit(image, (start_x + (32 * num), 32))
+
   def update_score_image(self, score):
     pass
 
