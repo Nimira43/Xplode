@@ -67,6 +67,14 @@ class Scoring():
     self.GAME = game
     self.score = score if Scoring.score_bonus <= 1 else score * 2  
 
+    self.time = pygame.time.get_ticks()
+    self.x = xpos
+    self.y = ypos
+
+    self.image = self.GAME.ASSETS.score_images[self.score][0]
+    self.rect = self.image.get_rect(topleft=(self.x, self.y))
+
+
   def update(self):
     pass
 
