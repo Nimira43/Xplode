@@ -37,7 +37,8 @@ class InfoPanel:
         self.GAME.insert_enemies_into_level(self.GAME.level_matrix, ['pontan' for _ in range(10)])
 
   def draw(self, window):
-    pass
+    window.blit(self.time_word_image, self.time_word_rect)
+    start_x = 192 if len(self.time_image) == 3 else 224 if len(self.time_image) == 2 else 256
 
   def update_score_image(self, score):
     pass
