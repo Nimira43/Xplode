@@ -14,6 +14,9 @@ class InfoPanel:
     self.time_total = gs.STAGE_TIME
     self.timer_start = pygame.time.get_ticks()
     self.time = 200
+    self.time_image = self.update_time_image()
+    self.time_word_image = self.images.time_word
+    self.time_word_rect = self.time_word_image.get_rect(topleft=(32, 32))
 
   def update_time_image(self):
     pass
