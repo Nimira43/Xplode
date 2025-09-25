@@ -38,9 +38,13 @@ class InfoPanel:
 
   def draw(self, window):
     window.blit(self.time_word_image, self.time_word_rect)
+    
     start_x = 192 if len(self.time_image) == 3 else 224 if len(self.time_image) == 2 else 256
-
     for num, image in enumerate(self.time_image):
+      window.blit(image, (start_x + (32 * num), 32))
+    
+    start_x = ((gs.SCREENWIDTH // 2) + 64 ) - (len(self.score_image) * 32)
+    for num, image in enumerate(self.score_image):
       window.blit(image, (start_x + (32 * num), 32))
 
   def update_score_image(self, score):
