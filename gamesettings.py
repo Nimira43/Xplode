@@ -143,4 +143,19 @@ SCORES = {
         "pass": 800,
         "pontan": 800,
 }
-SOUNDS = 
+SOUNDS = {
+        "effect-1.wav",
+        "effect-2.wav",
+        "effect-3.wav",
+        "effect-4.wav",
+        "effect-5.wav",
+        "effect-6.wav",
+        "effect-7.wav",
+        "title.wav",
+        "start.wav",
+        "bg-main.wav",
+        "power-up.wav",
+        "clear.wav",
+        "special.wav",
+        "miss.wav",
+}
