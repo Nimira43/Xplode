@@ -116,4 +116,9 @@ SPECIAL_CONNECTIONS = {'bomb_up': 'ballam',
 TIME_WORD = {'time_word': [(13, 4)]}
 LEFT_WORD = {'left_word': [(13, 0)]}
 STAGE_WORD = {'stage_word': [(14, 0)]}
-NUMBERS_BLACK = {}
+NUMBERS_BLACK = {
+        0: [(12, 10)], 1: [(12, 11)], 2: [(13, 8)],
+        3: [(13, 9)], 4: [(13, 10)], 5: [(13, 11)],
+        6: [(14, 8)], 7: [(14, 9)], 8: [(14, 10)],
+        9: [(14, 11)]
+}
