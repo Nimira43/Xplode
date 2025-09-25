@@ -74,9 +74,11 @@ class Scoring():
     self.image = self.GAME.ASSETS.score_images[self.score][0]
     self.rect = self.image.get_rect(topleft=(self.x, self.y))
 
-
   def update(self):
-    pass
+    if pygame.time.get_ticks() - self.time >= 1000:
+      self.kill()
+      Scoring.score_bonus -= 1
+      self.GAME.player.update_score(self.score)
 
   def draw(self, window, x_offset):
     pass
