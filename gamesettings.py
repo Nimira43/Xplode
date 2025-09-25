@@ -143,3 +143,4 @@ SCORES = {
         "pass": 800,
         "pontan": 800,
 }
+SOUNDS = 
