@@ -58,8 +58,14 @@ class InfoPanel:
     return score_images
 
 class Scoring():
+  scoring_bonus = 0
+
   def __init__(self, game, group, score, xpos, ypos):
-    pass  
+    super().__init__(group)
+    Scoring.score_bonus += 1
+
+    self.GAME = game
+    self.score = score if Scoring.score_bonus <= 1 else score * 2  
 
   def update(self):
     pass
