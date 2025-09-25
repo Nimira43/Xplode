@@ -5,9 +5,10 @@ class InfoPanel:
   def __init__(self, game, images):
     self.GAME = game
     self.images = images
-    self.block_nums = self.images.numbers_block
+    self.black_nums = self.images.numbers_block
     self.set_timer()
     self.player_lives_left_word = self.images.left_word
+    self.score_image = self.update_score_image(self.GAME.player.score)
 
 
   def set_timer(self):
