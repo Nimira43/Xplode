@@ -47,6 +47,9 @@ class InfoPanel:
     for num, image in enumerate(self.score_image):
       window.blit(image, (start_x + (32 * num), 32))
 
+    window.blit(self.player_lives_left_word, (1032, 32))
+    window.blit(self.black_nums[self.GAME.player.lives][0], (1184, 32))
+
   def update_score_image(self, score):
     pass
 
