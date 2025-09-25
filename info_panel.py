@@ -2,32 +2,31 @@ import pygame
 import gamesettings as gs
 
 class InfoPanel:
-  def __init__():
+  def __init__(self, game, images):
     pass
 
-  def set_timer():
+  def set_timer(self):
     pass
 
-  def update_time_image():
+  def update_time_image(self):
     pass
 
-  def update():
+  def update(self):
     pass
 
-  def draw():
+  def draw(self, window):
     pass
 
-  def update_score_image():
+  def update_score_image(self, score):
     pass
 
 class Scoring():
-  def __init__():
+  def __init__(self, game, group, score, xpos, ypos):
     pass  
 
-  def update():
+  def update(self):
     pass
 
-  def draw():
+  def draw(self, window, x_offset):
     pass
 
-  
