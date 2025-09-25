@@ -24,7 +24,12 @@ class InfoPanel:
     return images
 
   def update(self):
-    pass
+    self.score_image = self.update_score_image(self.GAME.player.score)
+
+    if self.time == 0:
+      return
+    
+    
 
   def draw(self, window):
     pass
