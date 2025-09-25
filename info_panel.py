@@ -10,9 +10,10 @@ class InfoPanel:
     self.player_lives_left_word = self.images.left_word
     self.score_image = self.update_score_image(self.GAME.player.score)
 
-
   def set_timer(self):
-    pass
+    self.time_total = gs.STAGE_TIME
+    self.timer_start = pygame.time.get_ticks()
+    self.time = 200
 
   def update_time_image(self):
     pass
