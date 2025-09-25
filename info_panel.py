@@ -23,3 +23,11 @@ class InfoPanel:
 class Scoring():
   def __init__():
     pass  
+
+  def update():
+    pass
+
+  def draw():
+    pass
+
+  
