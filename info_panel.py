@@ -51,7 +51,11 @@ class InfoPanel:
     window.blit(self.black_nums[self.GAME.player.lives][0], (1184, 32))
 
   def update_score_image(self, score):
-    pass
+    if score == 0:
+      score_images = [self.black_nums[0][0], self.black_nums[0][0]]
+    else:
+      score_images = [self.black_nums[int(digit)][0] for digit in str(score)]
+    return score_images
 
 class Scoring():
   def __init__(self, game, group, score, xpos, ypos):
