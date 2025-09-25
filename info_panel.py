@@ -29,7 +29,12 @@ class InfoPanel:
     if self.time == 0:
       return
     
-    
+    if pygame.time.get_ticks() - self.timer_start >= 1000:
+      self.timer_start = pygame.time.get_ticks()
+      self.time -= 1
+      self.time_image = self.update_time_image()
+      if self.time == 0:
+        self.GAME.insert_enemies_into_level(self.GAME.level_matrix, ['pontan' for _ in range(10)])
 
   def draw(self, window):
     pass
