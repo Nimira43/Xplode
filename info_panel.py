@@ -3,7 +3,12 @@ import gamesettings as gs
 
 class InfoPanel:
   def __init__(self, game, images):
-    pass
+    self.GAME = game
+    self.images = images
+    self.block_nums = self.images.numbers_block
+    self.set_timer()
+    self.player_lives_left_word = self.images.left_word
+
 
   def set_timer(self):
     pass
