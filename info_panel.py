@@ -19,7 +19,9 @@ class InfoPanel:
     self.time_word_rect = self.time_word_image.get_rect(topleft=(32, 32))
 
   def update_time_image(self):
-    pass
+    num_string_list = [item for item in str(self.time)]
+    images = [self.black_nums[int(image)][0] for image in num_string_list]
+    return images
 
   def update(self):
     pass
