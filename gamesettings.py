@@ -2,6 +2,7 @@ SCREENWIDTH = 1280
 SCREENHEIGHT = 892
 FPS = 60
 Y_OFFSET = 92
+STAGE_TIME = 200
 
 ENEMIES = {
   'ballom': {'speed': 1, 'wall_hack': False, 'chase_player': False, 'LoS': 0, 'see_player_hack': False},
@@ -111,3 +112,5 @@ SPECIAL_CONNECTIONS = {'bomb_up': 'ballam',
             'flame_pass': 'pass',
             'invincible': 'pontan',
             'exit': 'pontan'}
+
+TIME_WORD = {'time_word': [(13, 4)]}
